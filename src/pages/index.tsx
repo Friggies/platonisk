@@ -1,12 +1,11 @@
 import * as React from "react";
 import { GetStaticProps } from "next";
 import shuffle from "lodash.shuffle";
-
 import { printful } from "../lib/printful-client";
 import { formatVariantName } from "../lib/format-variant-name";
 import { PrintfulProduct } from "../types";
-
-import ProductGrid from "../components/ProductGrid";
+import ProductGrid from "../components/product/ProductGrid";
+import { formatVariantLabel } from "../lib/format-variant-label";
 
 type IndexPageProps = {
   products: PrintfulProduct[];
@@ -14,12 +13,7 @@ type IndexPageProps = {
 
 const IndexPage: React.FC<IndexPageProps> = ({ products }) => (
   <>
-    <div className="text-center pb-6 md:pb-12">
-      <h1 className="text-xl md:text-3xl lg:text-5xl font-bold">
-        All Products
-      </h1>
-    </div>
-
+    <h1>Boutique</h1>
     <ProductGrid products={products} />
   </>
 );
@@ -36,6 +30,7 @@ export const getStaticProps: GetStaticProps = async () => {
       ...sync_product,
       variants: sync_variants.map(({ name, ...variant }) => ({
         name: formatVariantName(name),
+        label: formatVariantLabel(variant.size, variant.color),
         ...variant,
       })),
     })

@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html lang="da">
         <Head>
           <link rel="preconnect" href="https://app.snipcart.com" />
           <link rel="preconnect" href="https://cdn.snipcart.com" />
@@ -15,12 +15,10 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
             rel="stylesheet"
           />
-          <link
-            href="/favicon.ico"
-            rel="shortcut icon"
-          />
+          <link href="/favicon.ico" rel="shortcut icon" />
+          <meta name="theme-color" content="#000000" />
         </Head>
-        <body className="antialiased">
+        <body>
           <Main />
           <NextScript />
           <script
@@ -31,6 +29,7 @@ class MyDocument extends Document {
             id="snipcart"
             data-config-modal-style="side"
             data-api-key={process.env.NEXT_PUBLIC_SNIPCART_API_KEY}
+            data-currency="dkk"
             hidden
           >
             <address-fields section="top">

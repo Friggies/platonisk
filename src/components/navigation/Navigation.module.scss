@@ -1,0 +1,80 @@
+.nav {
+  width: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  padding-block: 1rem;
+  text-orientation: mixed;
+  background-color: black;
+  z-index: 1;
+  button,
+  a {
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    touch-action: manipulation;
+    &:hover,
+    &:focus {
+      color: var(--color-blue);
+      outline: none;
+    }
+    > span {
+      position: absolute;
+      top: 0px;
+      right: 15px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--color-red);
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: 0;
+    height: 0;
+    border-bottom: 500px solid transparent;
+    border-right: 20px solid black;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-top: 20px solid black;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    width: 40px;
+    button,
+    a {
+      > span {
+        top: 0px;
+        right: 3px;
+      }
+    }
+    &:before {
+      bottom: -10px;
+      border-top: 10px solid black;
+      border-left: 40px solid transparent;
+    }
+  }
+}

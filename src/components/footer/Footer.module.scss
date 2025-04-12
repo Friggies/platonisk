@@ -1,0 +1,33 @@
+.footer {
+  padding: 1rem;
+  padding-right: calc(1rem + 60px);
+  position: relative;
+  background-color: black;
+  a {
+    color: white;
+    font-family: "Special Gothic Expanded One";
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 200ms ease-in-out;
+    &:hover {
+      color: var(--color-blue);
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 40px solid black;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

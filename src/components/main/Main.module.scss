@@ -1,0 +1,19 @@
+.main {
+  padding: 3rem calc(60px + 2rem) 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3rem;
+  background-image: url("/graphics/background.svg");
+  background-repeat: repeat;
+  background-size: 78px 150px;
+  min-height: 100svh;
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 2rem calc(40px + 1rem) 2rem 1rem;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

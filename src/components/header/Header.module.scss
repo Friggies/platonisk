@@ -1,0 +1,39 @@
+.header {
+  padding: 2rem calc(60px + 2rem) 2rem 2rem;
+  text-transform: uppercase;
+  background-color: black;
+  position: relative;
+  font-size: 2.5rem;
+  a {
+    color: white;
+    text-decoration: none;
+    font-family: "Climate Crisis";
+    transition: 200ms ease-in-out;
+    &:hover,
+    &:focus {
+      color: var(--color-blue);
+      outline: none;
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-right: 100vw solid transparent;
+    border-top: 40px solid black;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    padding: 1rem calc(40px + 1rem) 1rem 1rem;
+    font-size: 1.5rem;
+    &:after {
+      bottom: -20px;
+      border-top: 20px solid black;
+    }
+  }
+}
