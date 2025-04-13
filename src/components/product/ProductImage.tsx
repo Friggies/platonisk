@@ -1,8 +1,8 @@
-import { useEffect, useState, useRef } from "react";
-import { useSelector } from "react-redux";
-import Image from "next/image";
-import styles from "./ProductImage.module.scss";
-import { RootState } from "../../store";
+import { useEffect, useState, useRef } from 'react';
+import { useSelector } from 'react-redux';
+import Image from 'next/image';
+import styles from './ProductImage.module.scss';
+import { RootState } from '../../store';
 
 interface ProductImageProps {
   src: string;
@@ -19,7 +19,7 @@ const ProductImage = ({
   width,
   height,
 }: ProductImageProps) => {
-  const [transformStyle, setTransformStyle] = useState("");
+  const [transformStyle, setTransformStyle] = useState('');
   const [isHovered, setIsHovered] = useState(false);
 
   const animationsActive = useSelector(
@@ -68,7 +68,7 @@ const ProductImage = ({
         height={height}
         style={{
           transform: transformStyle,
-          transition: "transform 0.3s ease",
+          transition: 'transform 0.3s ease',
         }}
         className={styles.image}
       />

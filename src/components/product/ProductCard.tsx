@@ -1,10 +1,10 @@
-import { useState } from "react";
-import ProductImage from "./ProductImage";
-import useWishlistDispatch from "../../hooks/useWishlistDispatch";
-import useWishlistState from "../../hooks/useWishlistState";
-import ProductVariantPicker from "./ProductVariantPicker";
-import { Heart, MoveDownLeft } from "lucide-react";
-import styles from "./ProductCard.module.scss";
+import { useState } from 'react';
+import ProductImage from './ProductImage';
+import useWishlistDispatch from '../../hooks/useWishlistDispatch';
+import useWishlistState from '../../hooks/useWishlistState';
+import ProductVariantPicker from './ProductVariantPicker';
+import { Heart, MoveDownLeft } from 'lucide-react';
+import styles from './ProductCard.module.scss';
 
 const ProductCard = (product) => {
   const { addItem } = useWishlistDispatch();
@@ -20,11 +20,11 @@ const ProductCard = (product) => {
     (v) => v.external_id === activeVariantExternalId
   );
   const activeVariantFile = activeVariant.files.find(
-    ({ type }) => type === "preview"
+    ({ type }) => type === 'preview'
   );
 
-  const formattedPrice = new Intl.NumberFormat("da", {
-    style: "currency",
+  const formattedPrice = new Intl.NumberFormat('da', {
+    style: 'currency',
     currency: activeVariant.currency,
   }).format(activeVariant.retail_price);
 

@@ -1,4 +1,4 @@
-import type { NextApiRequest } from "next";
+import type { NextApiRequest } from 'next';
 
 declare global {
   interface Window {
@@ -6,28 +6,28 @@ declare global {
   }
   namespace JSX {
     interface IntrinsicElements {
-      "address-fields": any;
-      "snipcart-label": any;
-      "snipcart-input": any;
+      'address-fields': any;
+      'snipcart-label': any;
+      'snipcart-input': any;
     }
   }
 }
 
 export type SnipcartWebhookEvent =
-  | "order.completed"
-  | "order.status.changed"
-  | "order.paymentStatus.changed"
-  | "order.trackingNumber.changed"
-  | "order.refund.created"
-  | "order.notification.created"
-  | "subscription.created"
-  | "subscription.cancelled"
-  | "subscription.paused"
-  | "subscription.resumed"
-  | "subscription.invoice.created"
-  | "shippingrates.fetch"
-  | "taxes.calculate"
-  | "customauth:customer_updated";
+  | 'order.completed'
+  | 'order.status.changed'
+  | 'order.paymentStatus.changed'
+  | 'order.trackingNumber.changed'
+  | 'order.refund.created'
+  | 'order.notification.created'
+  | 'subscription.created'
+  | 'subscription.cancelled'
+  | 'subscription.paused'
+  | 'subscription.resumed'
+  | 'subscription.invoice.created'
+  | 'shippingrates.fetch'
+  | 'taxes.calculate'
+  | 'customauth:customer_updated';
 
 export interface SnipcartWebhookContent {
   discounts: { [key: string]: any };
@@ -72,7 +72,7 @@ export type SnipcartTaxItem = {
 
 export interface SnipcartRequest extends NextApiRequest {
   headers: {
-    "x-snipcart-requesttoken"?: string;
+    'x-snipcart-requesttoken'?: string;
   };
   body: {
     eventName: SnipcartWebhookEvent;

@@ -1,5 +1,5 @@
-import { useReducer, useEffect } from "react";
-import { hasSnipcart } from "../lib/has-snipcart";
+import { useReducer, useEffect } from 'react';
+import { hasSnipcart } from '../lib/has-snipcart';
 
 const initialState = {
   cart: {
@@ -12,7 +12,7 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "SET":
+    case 'SET':
       return {
         ...state,
         ...action.payload,
@@ -30,7 +30,7 @@ const useSnipcartCount = () => {
       const unsubscribe = window.Snipcart.store.subscribe(() => {
         const itemsCount = window.Snipcart.store.getState();
 
-        dispatch({ type: "SET", payload: itemsCount });
+        dispatch({ type: 'SET', payload: itemsCount });
       });
 
       return unsubscribe;

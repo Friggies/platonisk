@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 interface AnimationState {
   animationsActive: boolean;
@@ -9,15 +9,15 @@ const initialState: AnimationState = {
 };
 
 export const loadAnimationsState = createAsyncThunk(
-  "animation/loadAnimationsState",
+  'animation/loadAnimationsState',
   async () => {
-    if (typeof window !== "undefined") {
-      const storedState = localStorage.getItem("animationsActive");
+    if (typeof window !== 'undefined') {
+      const storedState = localStorage.getItem('animationsActive');
       if (storedState !== null) {
         return JSON.parse(storedState);
       } else {
         const prefersReducedMotion = window.matchMedia(
-          "(prefers-reduced-motion: reduce)"
+          '(prefers-reduced-motion: reduce)'
         ).matches;
         return !prefersReducedMotion;
       }
@@ -27,14 +27,14 @@ export const loadAnimationsState = createAsyncThunk(
 );
 
 export const toggleAnimations = createAsyncThunk(
-  "animation/toggleAnimations",
+  'animation/toggleAnimations',
   async (_, { getState }) => {
     const state = getState() as { animation: AnimationState };
     const newAnimationsActive = !state.animation.animationsActive;
 
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       localStorage.setItem(
-        "animationsActive",
+        'animationsActive',
         JSON.stringify(newAnimationsActive)
       );
     }
@@ -44,7 +44,7 @@ export const toggleAnimations = createAsyncThunk(
 );
 
 const animationSlice = createSlice({
-  name: "animation",
+  name: 'animation',
   initialState,
   reducers: {},
   extraReducers: (builder) => {

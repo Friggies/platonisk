@@ -1,25 +1,29 @@
-import * as React from "react";
-import { GetStaticProps } from "next";
-import shuffle from "lodash.shuffle";
-import { printful } from "../lib/printful-client";
-import { formatVariantName } from "../lib/format-variant-name";
-import { PrintfulProduct } from "../types";
-import ProductGrid from "../components/product/ProductGrid";
-import { formatVariantLabel } from "../lib/format-variant-label";
+import * as React from 'react';
+import { GetStaticProps } from 'next';
+import shuffle from 'lodash.shuffle';
+import { printful } from '../lib/printful-client';
+import { formatVariantName } from '../lib/format-variant-name';
+import { PrintfulProduct } from '../types';
+import ProductGrid from '../components/product/ProductGrid';
+import { formatVariantLabel } from '../lib/format-variant-label';
+import { NextSeo } from 'next-seo';
 
-type IndexPageProps = {
+type IndexProps = {
   products: PrintfulProduct[];
 };
 
-const IndexPage: React.FC<IndexPageProps> = ({ products }) => (
-  <>
-    <h1>Boutique</h1>
-    <ProductGrid products={products} />
-  </>
-);
+function Index({ products }: IndexProps) {
+  return (
+    <>
+      <NextSeo title="Boutique" />
+      <h1>Boutique</h1>
+      <ProductGrid products={products} />
+    </>
+  );
+}
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { result: productIds } = await printful.get("sync/products");
+  const { result: productIds } = await printful.get('sync/products');
 
   const allProducts = await Promise.all(
     productIds.map(async ({ id }) => await printful.get(`sync/products/${id}`))
@@ -43,4 +47,4 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default IndexPage;
+export default Index;

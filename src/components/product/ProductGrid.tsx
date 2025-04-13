@@ -1,5 +1,5 @@
-import ProductCard from "./ProductCard";
-import styles from "./ProductGrid.module.scss";
+import ProductCard from './ProductCard';
+import styles from './ProductGrid.module.scss';
 
 const ProductGrid = ({ products }) => {
   if (!products || products.length === 0) return null;

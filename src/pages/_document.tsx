@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
   render() {
@@ -11,12 +11,7 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.css"
           />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-            rel="stylesheet"
-          />
           <link href="/favicon.ico" rel="shortcut icon" />
-          <meta name="theme-color" content="#000000" />
         </Head>
         <body>
           <Main />

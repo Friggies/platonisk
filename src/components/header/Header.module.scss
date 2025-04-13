@@ -7,7 +7,7 @@
   a {
     color: white;
     text-decoration: none;
-    font-family: "Climate Crisis";
+    font-family: 'Climate Crisis';
     transition: 200ms ease-in-out;
     &:hover,
     &:focus {
@@ -16,7 +16,7 @@
     }
   }
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -40px;
     left: 0;

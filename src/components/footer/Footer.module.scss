@@ -5,7 +5,7 @@
   background-color: black;
   a {
     color: white;
-    font-family: "Special Gothic Expanded One";
+    font-family: 'Special Gothic Expanded One';
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -15,7 +15,7 @@
     }
   }
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: -40px;
     left: 0;

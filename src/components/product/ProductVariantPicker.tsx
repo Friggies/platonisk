@@ -1,5 +1,5 @@
-import { ChevronDown } from "lucide-react";
-import styles from "./ProductVariantPicker.module.scss";
+import { ChevronDown } from 'lucide-react';
+import styles from './ProductVariantPicker.module.scss';
 
 const ProductVariantPicker = ({ variants, ...props }) => {
   if (!variants || variants.length <= 1) return null;
@@ -11,7 +11,7 @@ const ProductVariantPicker = ({ variants, ...props }) => {
           <option
             key={external_id}
             value={external_id}
-            disabled={availability_status !== "active"}
+            disabled={availability_status !== 'active'}
           >
             {label}
           </option>

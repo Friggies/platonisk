@@ -1,7 +1,7 @@
-import Link from "next/link";
-import useWishlistState from "../../hooks/useWishlistState";
-import useSnipcartCount from "../../hooks/useSnipcartCount";
-import styles from "./Navigation.module.scss";
+import Link from 'next/link';
+import useWishlistState from '../../hooks/useWishlistState';
+import useSnipcartCount from '../../hooks/useSnipcartCount';
+import styles from './Navigation.module.scss';
 import {
   ArrowUp,
   Heart,
@@ -9,10 +9,10 @@ import {
   ShoppingBasket,
   Pause,
   Play,
-} from "lucide-react";
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../store";
-import { toggleAnimations } from "../../store/animationSlice";
+} from 'lucide-react';
+import { useSelector, useDispatch } from 'react-redux';
+import { RootState } from '../../store';
+import { toggleAnimations } from '../../store/animationSlice';
 
 export default function Navigation() {
   const { hasItems } = useWishlistState();

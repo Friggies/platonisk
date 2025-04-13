@@ -1,6 +1,6 @@
-import { printful } from "./printful-client";
+import { printful } from './printful-client';
 
-import type { SnipcartWebhookContent, PrintfulShippingItem } from "../types";
+import type { SnipcartWebhookContent, PrintfulShippingItem } from '../types';
 
 const createOrder = async ({
   invoiceNumber,
@@ -30,7 +30,7 @@ const createOrder = async ({
     })
   );
 
-  const { result } = await printful.post("orders", {
+  const { result } = await printful.post('orders', {
     external_id: invoiceNumber,
     recipient,
     items: printfulItems,

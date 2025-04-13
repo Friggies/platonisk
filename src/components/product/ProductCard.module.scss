@@ -18,7 +18,7 @@
 
 .button {
   border: 2px solid black;
-  font-family: "Special Gothic Expanded One";
+  font-family: 'Special Gothic Expanded One';
   background-color: transparent;
   text-transform: uppercase;
   backdrop-filter: blur(1px);
@@ -27,13 +27,13 @@
   padding: 0.5rem;
   font-size: inherit;
   cursor:
-    url("/graphics/cursor.png") 16 16,
+    url('/graphics/cursor.png') 16 16,
     auto;
 }
 
 .title {
   flex: 1;
-  font-family: "Special Gothic Expanded One";
+  font-family: 'Special Gothic Expanded One';
   text-transform: uppercase;
 }
 

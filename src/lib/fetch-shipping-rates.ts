@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { printful } from "./printful-client";
-import type { SnipcartShippingRate, PrintfulShippingItem } from "../types";
+import { printful } from './printful-client';
+import type { SnipcartShippingRate, PrintfulShippingItem } from '../types';
 
 interface SnipcartRequest extends NextApiRequest {
   body: {
@@ -27,14 +27,14 @@ export default async function handler(
 ) {
   const { eventName, content } = req.body;
 
-  if (eventName !== "shippingrates.fetch") return res.status(200).end();
+  if (eventName !== 'shippingrates.fetch') return res.status(200).end();
 
   if (content.items.length === 0)
     return res.status(200).json({
       errors: [
         {
-          key: "no_items",
-          message: "No items in cart to calculate shipping.",
+          key: 'no_items',
+          message: 'No items in cart to calculate shipping.',
         },
       ],
     });
@@ -68,7 +68,7 @@ export default async function handler(
   );
 
   try {
-    const { result } = await printful.post("shipping/rates", {
+    const { result } = await printful.post('shipping/rates', {
       recipient,
       items,
     });

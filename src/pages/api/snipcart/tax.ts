@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { printful } from "../../../lib/printful-client";
-import type { SnipcartTaxItem, PrintfulShippingItem } from "../../../types";
+import { printful } from '../../../lib/printful-client';
+import type { SnipcartTaxItem, PrintfulShippingItem } from '../../../types';
 
 interface SnipcartRequest extends NextApiRequest {
   body: {
@@ -27,14 +27,14 @@ export default async function handler(
 ) {
   const { eventName, content } = req.body;
 
-  if (eventName !== "taxes.calculate") return res.status(200).end();
+  if (eventName !== 'taxes.calculate') return res.status(200).end();
 
   if (content.items.length === 0)
     return res.status(200).json({
       errors: [
         {
-          key: "no_items",
-          message: "No items in cart to calculate taxes.",
+          key: 'no_items',
+          message: 'No items in cart to calculate taxes.',
         },
       ],
     });
@@ -49,8 +49,8 @@ export default async function handler(
     return res.status(200).json({
       errors: [
         {
-          key: "no_address",
-          message: "No address to calculate taxes.",
+          key: 'no_address',
+          message: 'No address to calculate taxes.',
         },
       ],
     });
@@ -76,7 +76,7 @@ export default async function handler(
   );
 
   try {
-    const { result } = await printful.post("orders/estimate-costs", {
+    const { result } = await printful.post('orders/estimate-costs', {
       shipping: shippingRateUserDefinedId,
       recipient,
       items,
@@ -85,7 +85,7 @@ export default async function handler(
     res.status(200).json({
       taxes: [
         {
-          name: "VAT",
+          name: 'VAT',
           amount: result.costs.vat,
           rate: 0,
         },

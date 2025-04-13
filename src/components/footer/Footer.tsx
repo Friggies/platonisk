@@ -1,6 +1,6 @@
-import Link from "next/link";
-import styles from "./Footer.module.scss";
-import { Handshake, Instagram, Mail, Truck } from "lucide-react";
+import Link from 'next/link';
+import styles from './Footer.module.scss';
+import { Handshake, Instagram, Mail, Truck } from 'lucide-react';
 
 export default function Footer() {
   return (
