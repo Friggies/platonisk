@@ -1,11 +1,15 @@
 import Link from "next/link";
 import styles from "./Footer.module.scss";
-import { Handshake, Mail, Truck } from "lucide-react";
+import { Handshake, Instagram, Mail, Truck } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <nav className={styles.nav}>
+        <Link href="http://instagram.com/platonisk.dk" target="_blank">
+          <Instagram />
+          Instagram
+        </Link>
         <Link href="/levering">
           <Truck />
           Levering

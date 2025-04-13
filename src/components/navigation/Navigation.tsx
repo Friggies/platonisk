@@ -40,13 +40,6 @@ export default function Navigation() {
       >
         {animationsActive ? <Pause /> : <Play />}
       </button>
-      <Link
-        href="http://instagram.com/platonisk.dk"
-        target="_blank"
-        aria-label="Instagram"
-      >
-        <Instagram />
-      </Link>
       <Link href="/onskeliste" aria-label="Ønskeliste">
         {hasItems && <span />}
         <Heart />
