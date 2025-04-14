@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
-import { Provider, useDispatch } from 'react-redux';
-import '../styles/app.css';
+import { Provider } from 'react-redux';
+import '../styles/main.scss';
 import { defaultSEO } from '../../next-seo.config';
 import { WishlistProvider } from '../context/wishlist';
 import Layout from '../components/Layout';
