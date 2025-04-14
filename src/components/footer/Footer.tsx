@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <nav className={styles.nav}>
-        <Link href="http://instagram.com/platonisk.dk" target="_blank">
+        <Link href="https://instagram.com/platonisk.dk" target="_blank">
           <Instagram />
           Instagram
         </Link>
