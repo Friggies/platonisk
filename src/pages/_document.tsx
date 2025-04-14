@@ -13,6 +13,7 @@ class MyDocument extends Document {
               __html: `
                 window.SnipcartSettings = {
                   publicApiKey: "${process.env.NEXT_PUBLIC_SNIPCART_API_KEY}",
+                  templatesUrl: "/snipcart",
                   modalStyle: "side",
                   currency: "dkk",
                   version: "3.7.1"
