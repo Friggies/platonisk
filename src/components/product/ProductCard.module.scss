@@ -18,7 +18,8 @@
 
 .button {
   border: 2px solid black;
-  font-family: 'Special Gothic Expanded One';
+  font-family: inherit;
+  font-weight: 800;
   background-color: transparent;
   text-transform: uppercase;
   backdrop-filter: blur(1px);
@@ -33,8 +34,9 @@
 
 .title {
   flex: 1;
-  font-family: 'Special Gothic Expanded One';
   text-transform: uppercase;
+  font-size: 1.25em;
+  font-weight: 600;
 }
 
 .mobileIcon {

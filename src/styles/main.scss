@@ -29,7 +29,7 @@ html {
 
 body {
   font-family:
-    'Special Gothic',
+    'Azeret Mono',
     -apple-system,
     BlinkMacSystemFont,
     avenir next,
@@ -46,22 +46,24 @@ body {
 }
 
 @font-face {
-  font-family: 'Special Gothic Expanded One';
-  src: url('/fonts/SpecialGothicExpandedOne.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'Azeret Mono';
+  src: url('/fonts/AzeretMono.ttf') format('truetype');
+  font-weight: 100 900;
   font-style: normal;
+  font-display: swap;
 }
+
 @font-face {
-  font-family: 'Special Gothic';
-  src: url('/fonts/SpecialGothic.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Azeret Mono';
+  src: url('/fonts/AzeretMono-Italic.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
 }
 
 h1 {
   font-size: 2rem;
   text-transform: uppercase;
-  font-family: 'Special Gothic Expanded One';
 }
 @media (max-width: 600px) {
   h1 {
@@ -70,7 +72,6 @@ h1 {
 }
 
 .link {
-  font-family: 'Special Gothic Expanded One';
   color: black;
   text-transform: uppercase;
 }
