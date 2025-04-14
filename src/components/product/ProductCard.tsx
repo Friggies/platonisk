@@ -68,7 +68,7 @@ const ProductCard = (product) => {
         data-item-image={activeVariantFile.preview_url}
         data-item-name={name}
       >
-        Køb nu
+        Bestil
       </button>
       <MoveDownLeft size="32" className={styles.mobileIcon} />
     </article>
