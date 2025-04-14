@@ -10,8 +10,8 @@ import {
   Pause,
   Play,
 } from 'lucide-react';
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../../store';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '../../store';
 import { toggleAnimations } from '../../store/animationSlice';
 
 export default function Navigation() {
@@ -22,7 +22,7 @@ export default function Navigation() {
   const animationsActive = useSelector(
     (state: RootState) => state.animation.animationsActive
   );
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleToggleAnimation = () => {
     dispatch(toggleAnimations());

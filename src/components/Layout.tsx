@@ -5,9 +5,10 @@ import Main from './main/Main';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { loadAnimationsState } from '../store/animationSlice';
+import { AppDispatch } from '../store';
 
 const Layout = ({ children }) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
     dispatch(loadAnimationsState());

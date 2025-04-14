@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import type { RootState } from '../store'; // adjust the path as needed
 
 interface AnimationState {
   animationsActive: boolean;
@@ -8,40 +9,42 @@ const initialState: AnimationState = {
   animationsActive: true,
 };
 
-export const loadAnimationsState = createAsyncThunk(
-  'animation/loadAnimationsState',
-  async () => {
-    if (typeof window !== 'undefined') {
-      const storedState = localStorage.getItem('animationsActive');
-      if (storedState !== null) {
-        return JSON.parse(storedState);
-      } else {
-        const prefersReducedMotion = window.matchMedia(
-          '(prefers-reduced-motion: reduce)'
-        ).matches;
-        return !prefersReducedMotion;
-      }
+export const loadAnimationsState = createAsyncThunk<
+  boolean,
+  void,
+  { state: RootState }
+>('animation/loadAnimationsState', async (_, thunkAPI) => {
+  if (typeof window !== 'undefined') {
+    const storedState = localStorage.getItem('animationsActive');
+    if (storedState !== null) {
+      return JSON.parse(storedState) as boolean;
+    } else {
+      const prefersReducedMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      ).matches;
+      return !prefersReducedMotion;
     }
-    return true;
   }
-);
+  return true;
+});
 
-export const toggleAnimations = createAsyncThunk(
-  'animation/toggleAnimations',
-  async (_, { getState }) => {
-    const state = getState() as { animation: AnimationState };
-    const newAnimationsActive = !state.animation.animationsActive;
+export const toggleAnimations = createAsyncThunk<
+  boolean,
+  void,
+  { state: RootState }
+>('animation/toggleAnimations', async (_, { getState }) => {
+  const state = getState();
+  const newAnimationsActive = !state.animation.animationsActive;
 
-    if (typeof window !== 'undefined') {
-      localStorage.setItem(
-        'animationsActive',
-        JSON.stringify(newAnimationsActive)
-      );
-    }
-
-    return newAnimationsActive;
+  if (typeof window !== 'undefined') {
+    localStorage.setItem(
+      'animationsActive',
+      JSON.stringify(newAnimationsActive)
+    );
   }
-);
+
+  return newAnimationsActive;
+});
 
 const animationSlice = createSlice({
   name: 'animation',
