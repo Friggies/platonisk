@@ -1,5 +1,4 @@
 import { printful } from './printful-client';
-
 import type { SnipcartWebhookContent, PrintfulShippingItem } from '../types';
 
 const createOrder = async ({

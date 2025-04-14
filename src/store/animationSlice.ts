@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import type { RootState } from '../store'; // adjust the path as needed
+import type { RootState } from '../store';
 
 interface AnimationState {
   animationsActive: boolean;

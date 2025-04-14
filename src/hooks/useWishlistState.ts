@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-
 import { WishlistStateContext } from '../context/wishlist';
 
 const useWishlistState = () => {

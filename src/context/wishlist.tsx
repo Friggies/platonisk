@@ -1,7 +1,5 @@
 import React, { createContext, useReducer, useEffect } from 'react';
-
 import useLocalStorage from '../hooks/useLocalStorage';
-
 import type { PrintfulProduct } from '../types';
 
 interface InitialState {

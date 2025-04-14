@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 import { printful } from './printful-client';
 import type { SnipcartTaxItem, PrintfulShippingItem } from '../types';
 

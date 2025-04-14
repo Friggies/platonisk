@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {

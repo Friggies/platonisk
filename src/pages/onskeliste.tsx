@@ -1,5 +1,4 @@
 import useWishlistState from '../hooks/useWishlistState';
-
 import ProductGrid from '../components/product/ProductGrid';
 import Link from 'next/link';
 import { Heart } from 'lucide-react';

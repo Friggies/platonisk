@@ -2,14 +2,7 @@ import Link from 'next/link';
 import useWishlistState from '../../hooks/useWishlistState';
 import useSnipcartCount from '../../hooks/useSnipcartCount';
 import styles from './Navigation.module.scss';
-import {
-  ArrowUp,
-  Heart,
-  Instagram,
-  ShoppingBasket,
-  Pause,
-  Play,
-} from 'lucide-react';
+import { ArrowUp, Heart, ShoppingBasket, Pause, Play } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../store';
 import { toggleAnimations } from '../../store/animationSlice';
