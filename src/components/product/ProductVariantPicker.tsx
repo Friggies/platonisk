@@ -2,7 +2,12 @@ import { ChevronDown } from 'lucide-react';
 import styles from './ProductVariantPicker.module.scss';
 
 const ProductVariantPicker = ({ variants, ...props }) => {
-  if (!variants || variants.length <= 1) return null;
+  if (!variants || variants.length <= 1)
+    return (
+      <div className={styles.selectWrapper}>
+        <div className={styles.select}>Størrelsesløs</div>
+      </div>
+    );
 
   return (
     <div className={styles.selectWrapper}>

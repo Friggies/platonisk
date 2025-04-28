@@ -1,10 +1,12 @@
 .selectWrapper {
+  margin-top: auto;
   position: relative;
   width: 100%;
 }
 
 .select {
   appearance: none;
+  text-align: center;
   -webkit-appearance: none;
   -moz-appearance: none;
   border: 2px solid black;
