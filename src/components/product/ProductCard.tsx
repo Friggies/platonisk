@@ -43,14 +43,14 @@ const ProductCard = (product) => {
       {activeVariantFile && (
         <ProductImage
           src={activeVariantFile.preview_url}
-          alt={`${activeVariant.name} ${name}`}
-          title={`${activeVariant.name} ${name}`}
+          alt={`${activeVariant.label} ${name}`}
+          title={`${activeVariant.label} ${name}`}
           width={250}
           height={250}
         />
       )}
       <div>
-        <p className={styles.title}>{name}</p>
+        <h2 className={styles.title}>{name}</h2>
         <p>{formattedPrice}</p>
       </div>
       <ProductVariantPicker
@@ -64,7 +64,7 @@ const ProductCard = (product) => {
         data-item-id={activeVariantExternalId}
         data-item-price={activeVariant.retail_price}
         data-item-url={`/api/products/${activeVariantExternalId}`}
-        data-item-description={activeVariant.name}
+        data-item-description={activeVariant.label}
         data-item-image={activeVariantFile.preview_url}
         data-item-name={name}
       >

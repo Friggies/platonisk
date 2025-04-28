@@ -2,7 +2,6 @@ import * as React from 'react';
 import { GetStaticProps } from 'next';
 import shuffle from 'lodash.shuffle';
 import { printful } from '../lib/printful-client';
-import { formatVariantName } from '../lib/format-variant-name';
 import { PrintfulProduct } from '../types';
 import ProductGrid from '../components/product/ProductGrid';
 import { formatVariantLabel } from '../lib/format-variant-label';
@@ -33,8 +32,7 @@ export const getStaticProps: GetStaticProps = async () => {
     ({ result: { sync_product, sync_variants } }) => ({
       ...sync_product,
       variants: sync_variants.map(({ name, ...variant }) => ({
-        name: formatVariantName(name),
-        label: formatVariantLabel(variant.size, variant.color),
+        label: formatVariantLabel(name, variant.size),
         ...variant,
       })),
     })
