@@ -32,7 +32,7 @@ export const getStaticProps: GetStaticProps = async () => {
     ({ result: { sync_product, sync_variants } }) => ({
       ...sync_product,
       variants: sync_variants.map(({ name, ...variant }) => ({
-        label: formatVariantLabel(name, variant.size),
+        label: formatVariantLabel(name),
         ...variant,
       })),
     })
