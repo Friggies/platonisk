@@ -5,7 +5,9 @@ const ProductVariantPicker = ({ variants, ...props }) => {
   if (!variants || variants.length <= 1)
     return (
       <div className={styles.selectWrapper}>
-        <div className={styles.select}>Størrelsesløs</div>
+        <div className={styles.select}>
+          {variants[0] ? variants[0].label : 'Størrelse: OS'}
+        </div>
       </div>
     );
 
