@@ -1,23 +1,16 @@
 import Header from './header/Header';
-import Navigation from './navigation/Navigation';
 import Footer from './footer/Footer';
 import Main from './main/Main';
-import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { loadAnimationsState } from '../store/animationSlice';
-import { AppDispatch } from '../store';
+import { useState } from 'react';
+import Menu from './menu/Menu';
 
 const Layout = ({ children }) => {
-  const dispatch = useDispatch<AppDispatch>();
-
-  useEffect(() => {
-    dispatch(loadAnimationsState());
-  }, [dispatch]);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
-      <Header />
-      <Navigation />
+      <Header isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
+      <Menu isOpen={isMenuOpen} onClose={() => setMenuOpen(false)} />
       <Main>{children}</Main>
       <Footer />
     </>

@@ -1,9 +1,8 @@
 import { GetStaticProps } from 'next';
-import { PrintfulProduct } from '../types';
-import ProductGrid from '../components/product/ProductGrid';
 import { NextSeo } from 'next-seo';
-import { getAllProducts } from '../lib/get-all-products';
-import Hero from '../components/hero/Hero';
+import { PrintfulProduct } from '../../types';
+import ProductGrid from '../../components/product/ProductGrid';
+import { getAllProducts } from '../../lib/get-all-products';
 
 type IndexProps = {
   products: PrintfulProduct[];
@@ -12,10 +11,8 @@ type IndexProps = {
 function Index({ products }: IndexProps) {
   return (
     <>
-      <NextSeo title="Hi" />
-      <Hero>
-        <h1>Hi</h1>
-      </Hero>
+      <NextSeo title="Boutique" />
+      <h1>Boutique</h1>
       <ProductGrid products={products} />
     </>
   );

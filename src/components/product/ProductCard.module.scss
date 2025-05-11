@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 1rem;
 }
 
@@ -16,37 +17,20 @@
   touch-action: manipulation;
 }
 
-.button {
-  border: 2px solid black;
-  font-family: inherit;
-  font-weight: 800;
-  background-color: transparent;
-  text-transform: uppercase;
-  backdrop-filter: blur(1px);
-  color: black;
+.link {
+  text-transform: none;
+  text-decoration: none;
+}
+
+.image {
   width: 100%;
-  padding: 0.5rem;
-  font-size: inherit;
-  cursor:
-    url('/graphics/cursor.png') 16 16,
-    auto;
+  height: auto;
+  display: block;
+  aspect-ratio: 1;
 }
 
 .title {
+  font-size: inherit;
   text-transform: uppercase;
-  font-size: 1.25em;
-  font-weight: 600;
-}
-
-.mobileIcon {
-  display: none;
-  position: absolute;
-  right: -40px;
-  bottom: 15px;
-}
-
-@media (max-width: 600px) {
-  .mobileIcon {
-    display: block;
-  }
+  font-weight: 500;
 }

@@ -1,6 +1,13 @@
 import Link from 'next/link';
 import styles from './Footer.module.scss';
-import { Handshake, Instagram, Mail, Truck } from 'lucide-react';
+import {
+  Handshake,
+  HelpCircle,
+  Instagram,
+  Mail,
+  MessageCircleQuestion,
+  Truck,
+} from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -21,6 +28,10 @@ export default function Footer() {
         <Link href="/kontakt">
           <Mail />
           Kontakt
+        </Link>
+        <Link href="/hjalp">
+          <MessageCircleQuestion strokeWidth="1" size="30" />
+          Hjælp
         </Link>
       </nav>
     </footer>

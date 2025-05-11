@@ -91,6 +91,7 @@ export interface ISyncProduct {
 }
 
 export interface PrintfulProduct {
+  external_id: string;
   id: string;
   name: string;
 }
