@@ -7,7 +7,7 @@
   width: 100%;
   z-index: 1;
   backdrop-filter: blur(5px);
-  transition: 0s linear;
+  transition: 200ms ease-in-out;
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
   span {

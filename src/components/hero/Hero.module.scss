@@ -4,10 +4,21 @@
   background-image: url('/img.jpg');
   background-size: cover;
   background-position: center;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 2svh;
+  padding: 0.5rem;
+  padding-bottom: 20svh;
   background-attachment: fixed;
   color: white;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-bottom: 10svh;
+  }
 }
 
 @supports (-webkit-touch-callout: inherit) {

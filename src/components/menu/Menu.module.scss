@@ -1,8 +1,71 @@
 .menu {
-  background-color: red;
+  border: none;
+  width: 30%;
+  padding: 0.5rem;
+  position: fixed;
+  top: 0;
+  min-height: 100%;
+  box-shadow: none !important;
+  margin-left: auto;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  &[open] {
+    animation: showDialog 500ms ease-in-out;
+    &::backdrop {
+      animation: showBackdrop 500ms ease-in-out;
+    }
+  }
+  &.hidden {
+    animation: hideDialog 500ms ease-in-out;
+    &::backdrop {
+      animation: hideBackdrop 500ms ease-in-out;
+    }
+  }
+  &::backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 
 @media (max-width: 600px) {
   .menu {
+    min-width: 100%;
+  }
+}
+
+@keyframes showDialog {
+  from {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes hideDialog {
+  to {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+}
+@keyframes showBackdrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hideBackdrop {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

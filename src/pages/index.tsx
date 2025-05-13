@@ -24,8 +24,8 @@ function Index({ products }: IndexProps) {
       <Section>
         <h2>
           Platonisk stræber efter at motivere dig og dine venner til at være
-          aktive sammen, fordi en sund livssting og stærke venskaber er den
-          bedste måde at leve sit liv på.
+          aktive sammen, fordi en sund livs&shy;stil og stærke ven&shy;skaber er
+          den bedste måde at leve sit liv på.
         </h2>
       </Section>
       <ProductGrid products={products} />

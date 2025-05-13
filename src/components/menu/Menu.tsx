@@ -13,11 +13,26 @@ export default function Menu({ isOpen, onClose }: MenuProps) {
     const dialog = dialogRef.current;
     if (!dialog) return;
 
+    const handleAnimationEnd = (e: AnimationEvent) => {
+      dialog.classList.remove(styles.hidden);
+      dialog.close();
+    };
+
     if (isOpen) {
       if (!dialog.open) dialog.showModal();
     } else {
-      if (dialog.open) dialog.close();
+      if (dialog.open) {
+        dialog.classList.add(styles.hidden);
+        dialog.addEventListener('animationend', handleAnimationEnd, {
+          once: true,
+        });
+      }
     }
+
+    // Clean up if the component unmounts mid-animation
+    return () => {
+      dialog.removeEventListener('animationend', handleAnimationEnd);
+    };
   }, [isOpen]);
 
   const handleBackdropClick = (e: React.MouseEvent) => {
@@ -35,11 +50,16 @@ export default function Menu({ isOpen, onClose }: MenuProps) {
       <button
         className={styles.closeButton}
         onClick={onClose}
-        aria-label="Luk menu"
+        aria-label="Close menu"
       >
         ×
       </button>
-      {/* TODO: Add menu items here */}
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ab
+        accusamus eligendi id. Repudiandae dolore, officiis sit aspernatur, quae
+        commodi temporibus quibusdam illo ipsam eius assumenda iure ullam
+        expedita odit?
+      </p>
     </dialog>
   );
 }
