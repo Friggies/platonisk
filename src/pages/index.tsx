@@ -7,6 +7,7 @@ import Hero from '../components/hero/Hero';
 import Section from '../components/section/Section';
 import Button from '../components/button/Button';
 import { Quote } from 'lucide-react';
+import Logorow from '../components/logorow/Logorow';
 
 type IndexProps = {
   products: PrintfulProduct[];
@@ -20,7 +21,6 @@ function Index({ products }: IndexProps) {
         <h1>Hi</h1>
         <Button title="Udforsk"></Button>
       </Hero>
-
       <Section>
         <h2>
           Platonisk stræber efter at motivere dig og dine venner til at være
@@ -28,6 +28,7 @@ function Index({ products }: IndexProps) {
           den bedste måde at leve sit liv på.
         </h2>
       </Section>
+      <Logorow />
       <ProductGrid products={products} />
     </>
   );
