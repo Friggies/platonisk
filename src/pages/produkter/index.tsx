@@ -3,6 +3,7 @@ import { NextSeo } from 'next-seo';
 import { PrintfulProduct } from '../../types';
 import ProductGrid from '../../components/product/ProductGrid';
 import { getAllProducts } from '../../lib/get-all-products';
+import Section from '../../components/section/Section';
 
 type IndexProps = {
   products: PrintfulProduct[];
@@ -11,9 +12,11 @@ type IndexProps = {
 function Index({ products }: IndexProps) {
   return (
     <>
-      <NextSeo title="Boutique" />
-      <h1>Boutique</h1>
-      <ProductGrid products={products} />
+      <NextSeo title="Alle produkter" />
+      <Section>
+        <h1>Alle produkter</h1>
+        <ProductGrid products={products} />
+      </Section>
     </>
   );
 }

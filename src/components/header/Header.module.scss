@@ -8,20 +8,18 @@
   z-index: 1;
   backdrop-filter: blur(5px);
   transition: 200ms ease-in-out;
-  color: white;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+  background: linear-gradient(rgba(0, 0, 0, 0), transparent);
   span {
     position: absolute;
     top: 0;
-    right: 2px;
+    right: 0;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #cc8b65;
+    background-color: #d1a505;
   }
 }
 .scrolled {
-  color: black;
   background: rgba(255, 255, 255, 0.8);
 }
 
@@ -52,7 +50,6 @@
   .navigation {
     gap: 0rem;
   }
-
   .icon {
     transform: scale(0.8);
   }

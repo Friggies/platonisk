@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Heart } from 'lucide-react';
 import { NextSeo } from 'next-seo';
 import { useEffect, useState } from 'react';
+import Section from '../components/section/Section';
 
 export default function WishlistPage() {
   const [mounted, setMounted] = useState(false);
@@ -15,7 +16,10 @@ export default function WishlistPage() {
       <NextSeo title="Ønskeliste" />
       <h1>Ønskeliste</h1>
       {mounted && hasItems ? (
-        <ProductGrid products={items} />
+        <Section>
+          <h2>Dine gemte produkter</h2>
+          <ProductGrid products={items} />
+        </Section>
       ) : (
         <>
           <p>

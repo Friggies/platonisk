@@ -50,7 +50,7 @@ const ProductCard = (product) => {
         onClick={addToWishlist}
       >
         {mounted && onWishlist ? (
-          <Heart strokeWidth="1" fill="#fb2c36" />
+          <Heart strokeWidth="1" fill="#155332" />
         ) : (
           <Heart strokeWidth="1" />
         )}

@@ -9,11 +9,11 @@
   text-align: center;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border: 2px solid black;
+  border: 2px solid #06362d;
   font-family: inherit;
   background-color: transparent;
   backdrop-filter: blur(1px);
-  color: black;
+  color: #06362d;
   width: 100%;
   padding: 0.5rem;
   padding-right: 2rem;
@@ -28,5 +28,5 @@
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  color: black;
+  color: #155332;
 }

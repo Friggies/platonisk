@@ -1,17 +1,19 @@
 .section {
   width: 100%;
-  padding-block: 6rem;
+  padding-block: 5rem;
 }
 .content {
   max-width: 800px;
   padding-inline: 1rem;
   margin: auto;
   text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 @media (max-width: 600px) {
-  .main {
-    align-items: flex-start;
-    gap: 1rem;
+  .content {
+    text-align: left;
   }
 }

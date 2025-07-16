@@ -5,14 +5,19 @@
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  gap: 2svh;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
   padding: 0.5rem;
-  padding-bottom: 20svh;
   background-attachment: fixed;
-  color: white;
+  border-bottom: 2px solid #06362d;
+  box-shadow:
+    0 2px #ffffff,
+    0 4px #06362d,
+    0 6px #ffffff,
+    0 8px #06362d;
 }
 
 @media (max-width: 600px) {

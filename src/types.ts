@@ -94,6 +94,7 @@ export interface PrintfulProduct {
   external_id: string;
   id: string;
   name: string;
+  collection: string;
 }
 
 export type PrintfulShippingItem = {

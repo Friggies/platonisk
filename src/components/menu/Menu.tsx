@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import styles from './Menu.module.scss';
+import Link from 'next/link';
 
 interface MenuProps {
   isOpen: boolean;
@@ -52,14 +53,13 @@ export default function Menu({ isOpen, onClose }: MenuProps) {
         onClick={onClose}
         aria-label="Close menu"
       >
-        ×
+        &#x2715;
       </button>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ab
-        accusamus eligendi id. Repudiandae dolore, officiis sit aspernatur, quae
-        commodi temporibus quibusdam illo ipsam eius assumenda iure ullam
-        expedita odit?
-      </p>
+      <Link href="produkter">Produkter</Link>
+      <Link href="kollektioner">Kollektioner</Link>
+      <Link href="onskeliste">Blog</Link>
+      <Link href="levering">Levering</Link>
+      <Link href="kontakt">Kontakt</Link>
     </dialog>
   );
 }

@@ -1,3 +1,5 @@
+@use './snipcart.scss';
+
 * {
   padding: 0;
   margin: 0;
@@ -27,7 +29,8 @@ html {
 }
 
 body {
-  color: black;
+  color: #06362d;
+  background-color: #ffffff;
   font-family:
     'Instrument Sans',
     -apple-system,
@@ -45,22 +48,6 @@ body {
     sans-serif;
 }
 
-@font-face {
-  font-family: 'Azeret Mono';
-  src: url('/fonts/AzeretMono.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Azeret Mono';
-  src: url('/fonts/AzeretMono-Italic.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-}
-
 h1,
 h2,
 h3,
@@ -73,11 +60,12 @@ h6 {
 h1 {
   font-size: 2.5rem;
   font-family: 'Instrument Serif';
+  font-weight: 400;
 }
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.5rem;
-  }
+
+.serif {
+  font-family: 'Instrument Serif';
+  font-weight: 400;
 }
 
 button {
@@ -86,12 +74,19 @@ button {
   border-radius: 0;
   cursor: pointer;
   color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  text-align: left;
 }
 
 .link,
 a {
   color: inherit;
   text-transform: uppercase;
+}
+
+strong {
+  font-weight: 500;
 }
 /* instrument-serif-regular - latin */
 @font-face {

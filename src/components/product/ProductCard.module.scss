@@ -8,7 +8,7 @@
 
 .wishlist {
   position: absolute;
-  color: #fb2c36;
+  color: #06362d;
   background-color: transparent;
   border: none;
   top: 0;
@@ -32,5 +32,6 @@
 .title {
   font-size: inherit;
   text-transform: uppercase;
+  text-decoration: underline;
   font-weight: 500;
 }

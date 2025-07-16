@@ -1,7 +1,8 @@
 .menu {
   border: none;
   width: 30%;
-  padding: 0.5rem;
+  padding-inline: 2rem;
+  padding-block: 1rem;
   position: fixed;
   top: 0;
   min-height: 100%;
@@ -11,6 +12,9 @@
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
   &[open] {
     animation: showDialog 500ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     &::backdrop {
       animation: showBackdrop 500ms ease-in-out;
     }
@@ -29,6 +33,12 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0);
   }
+}
+.closeButton {
+  font-size: 30px;
+  text-align: right;
+  width: fit-content;
+  margin-left: auto;
 }
 
 @media (max-width: 600px) {

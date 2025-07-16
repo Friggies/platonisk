@@ -5,6 +5,7 @@ import { NextSeo } from 'next-seo';
 import { printful } from '../../lib/printful-client';
 import { PrintfulProduct } from '../../types';
 import ProductGrid from '../../components/product/ProductGrid';
+import Section from '../../components/section/Section';
 
 interface ExtraProductData {
   printfulId: number;
@@ -26,9 +27,11 @@ export default function CollectionPage({
   return (
     <>
       <NextSeo title={`Collection: ${collection}`} />
-      <h1>Collection: {collection}</h1>
       {products.length > 0 ? (
-        <ProductGrid products={products} />
+        <Section>
+          <h1>{collection}</h1>
+          <ProductGrid products={products} />
+        </Section>
       ) : (
         <p>No products found in this collection.</p>
       )}
