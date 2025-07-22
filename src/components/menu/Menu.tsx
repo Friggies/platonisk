@@ -55,11 +55,11 @@ export default function Menu({ isOpen, onClose }: MenuProps) {
       >
         &#x2715;
       </button>
-      <Link href="produkter">Produkter</Link>
-      <Link href="kollektioner">Kollektioner</Link>
-      <Link href="onskeliste">Blog</Link>
-      <Link href="levering">Levering</Link>
-      <Link href="kontakt">Kontakt</Link>
+      <Link href="/produkter">Produkter</Link>
+      <Link href="/kollektioner">Kollektioner</Link>
+      <Link href="/onskeliste">Blog</Link>
+      <Link href="/levering">Levering</Link>
+      <Link href="/kontakt">Kontakt</Link>
     </dialog>
   );
 }
