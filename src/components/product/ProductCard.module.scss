@@ -1,3 +1,5 @@
+@use '../../styles/colors.scss' as c;
+
 .card {
   position: relative;
   display: flex;
@@ -8,7 +10,7 @@
 
 .wishlist {
   position: absolute;
-  color: #06362d;
+  color: c.$color-vine;
   background-color: transparent;
   border: none;
   top: 0;

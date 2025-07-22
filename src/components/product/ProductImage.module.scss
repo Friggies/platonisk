@@ -1,3 +1,5 @@
+@use '../../styles/colors.scss' as c;
+
 .image {
   width: 100%;
   max-width: 320px;
@@ -6,12 +8,12 @@
     45deg,
     transparent 0,
     transparent 10px,
-    #06362d 10px,
-    #06362d 14px,
+    c.$color-vine 10px,
+    c.$color-vine 14px,
     transparent 14px,
     transparent 24px
   );
-  outline: 2px solid #155332;
+  outline: 2px solid c.$color-vine;
   outline-offset: 4px;
   margin-top: 8px;
 }

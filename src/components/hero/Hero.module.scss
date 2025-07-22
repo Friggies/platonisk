@@ -1,3 +1,5 @@
+@use '../../styles/colors.scss' as c;
+
 .hero {
   height: 100svh;
   width: 100%;
@@ -12,12 +14,12 @@
   gap: 1rem;
   padding: 0.5rem;
   background-attachment: fixed;
-  border-bottom: 2px solid #06362d;
+  border-bottom: 2px solid c.$color-vine;
   box-shadow:
-    0 2px #ffffff,
-    0 4px #06362d,
-    0 6px #ffffff,
-    0 8px #06362d;
+    0 2px c.$color-lime,
+    0 4px c.$color-vine,
+    0 6px c.$color-lime,
+    0 8px c.$color-vine;
 }
 
 @media (max-width: 600px) {

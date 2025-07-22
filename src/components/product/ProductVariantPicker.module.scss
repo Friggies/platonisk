@@ -1,3 +1,5 @@
+@use '../../styles/colors.scss' as c;
+
 .selectWrapper {
   margin-top: auto;
   position: relative;
@@ -9,11 +11,11 @@
   text-align: center;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border: 2px solid #06362d;
+  border: 2px solid c.$color-vine;
   font-family: inherit;
   background-color: transparent;
   backdrop-filter: blur(1px);
-  color: #06362d;
+  color: c.$color-black;
   width: 100%;
   padding: 0.5rem;
   padding-right: 2rem;
@@ -28,5 +30,5 @@
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  color: #155332;
+  color: c.$color-vine;
 }

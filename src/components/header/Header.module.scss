@@ -1,3 +1,5 @@
+@use '../../styles/colors.scss' as c;
+
 .header {
   padding: 0.5rem 3rem;
   display: flex;
@@ -8,7 +10,8 @@
   z-index: 1;
   backdrop-filter: blur(5px);
   transition: 200ms ease-in-out;
-  background: linear-gradient(rgba(0, 0, 0, 0), transparent);
+  background: transparent;
+  border-bottom: 2px solid transparent;
   span {
     position: absolute;
     top: 0;
@@ -16,11 +19,12 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #d1a505;
+    background-color: c.$color-gold;
   }
 }
 .scrolled {
-  background: rgba(255, 255, 255, 0.8);
+  background: transparentize(c.$color-lime, 0.5);
+  border-color: c.$color-vine;
 }
 
 .title {

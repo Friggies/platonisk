@@ -1,4 +1,5 @@
 @use './snipcart.scss';
+@use './colors.scss' as c;
 
 * {
   padding: 0;
@@ -16,21 +17,13 @@
   }
 }
 
-:root {
-  --color-black: #231f20;
-  --color-red: #ef476f;
-  --color-yellow: #ffd166;
-  --color-green: #06d6a0;
-  --color-blue: #118ab2;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  color: #06362d;
-  background-color: #ffffff;
+  color: c.$color-black;
+  background-color: c.$color-lime;
   font-family:
     'Instrument Sans',
     -apple-system,
