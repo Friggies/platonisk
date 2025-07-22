@@ -12,7 +12,7 @@ type IndexProps = {
 function Index({ products }: IndexProps) {
   return (
     <>
-      <NextSeo title="Alle produkter" />
+      <NextSeo title="Alle Produkter" />
       <Section>
         <h1>Alle produkter</h1>
         <ProductGrid products={products} />

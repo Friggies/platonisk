@@ -8,13 +8,13 @@ import { getAllProducts } from '../../lib/get-all-products';
 import localProducts from '../../data/products.json';
 import Section from '../../components/section/Section';
 import Row from '../../components/row/Row';
-import Image from 'next/image';
 import Column from '../../components/column/Column';
 import ProductImage from '../../components/product/ProductImage';
 import Logorow from '../../components/logorow/Logorow';
 import Card from '../../components/card/Card';
 import Link from 'next/link';
 import ProductGrid from '../../components/product/ProductGrid';
+import { NextSeo } from 'next-seo';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
@@ -75,6 +75,10 @@ export default function ProductPage({ product, relatedProducts }) {
   const onWishlist = isSaved(id);
   return (
     <>
+      <NextSeo
+        title={`${product.name} - ${product.color.toUpperCase()}`}
+        description={product.description}
+      />
       <Section>
         <Row>
           <Column>

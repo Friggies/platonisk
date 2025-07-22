@@ -26,7 +26,7 @@ export default function CollectionPage({
 }: CollectionPageProps) {
   return (
     <>
-      <NextSeo title={`Collection: ${collection}`} />
+      <NextSeo title={collection} />
       {products.length > 0 ? (
         <Section>
           <h1>{collection}</h1>

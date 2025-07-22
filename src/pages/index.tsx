@@ -19,7 +19,7 @@ type IndexProps = {
 function Index({ featuredProducts }: IndexProps) {
   return (
     <>
-      <NextSeo title="Hi" />
+      <NextSeo title="Forside" />
       <Hero>
         <h1>Få pulsen op med CRACKED</h1>
         <Button title="Udforsk kollektion"></Button>
@@ -38,9 +38,9 @@ function Index({ featuredProducts }: IndexProps) {
         <Column>
           <h2>Nyeste kollektioner</h2>
           <Row>
+            <Card href="/kollektioner/mmxxvi" title="MMXXVI" />
             <Card href="/kollektioner/cracked" title="Cracked" />
-            <Card href="/kollektioner/cracked" title="Cracked" />
-            <Card href="/kollektioner/cracked" title="Cracked" />
+            <Card href="/kollektioner/active" title="Active" />
           </Row>
           <Link href="/kollektioner" style={{ alignSelf: 'end' }}>
             Udforsk alle kollektioner

@@ -1,5 +1,5 @@
 const description =
-  'Launch your own fully automated store with Snipcart, Printful, and Next.js';
+  'Platonisk arbejder for at motivere dig og dine venner til at have en fælles aktiv livsstil, fordi en sund krop og stærke venskaber er den bedste måde at leve på.';
 const title = 'PLATONISK';
 
 const seo = {
