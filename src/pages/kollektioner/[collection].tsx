@@ -66,7 +66,7 @@ export const getStaticProps: GetStaticProps<CollectionPageProps> = async ({
   const collection = params?.collection as string;
 
   // Load extra data JSON
-  const dataFile = path.join(process.cwd(), 'data', 'products.json');
+  const dataFile = path.join(process.cwd(), 'src', 'data', 'products.json');
   const raw = fs.readFileSync(dataFile, 'utf8');
   const extraData: ExtraProductData[] = JSON.parse(raw);
 
