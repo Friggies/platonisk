@@ -6,7 +6,7 @@ const seo = {
   title,
   titleTemplate: '%s | PLATONISK',
   description,
-  themeColor: '#000000',
+  themeColor: '#b0deb7',
   language: 'da',
   openGraph: {
     title,
@@ -29,7 +29,7 @@ const seo = {
         content: 'black-translucent',
       },
       { name: 'mobile-web-app-capable', content: 'yes' },
-      { name: 'msapplication-TileColor', content: '#000000' },
+      { name: 'msapplication-TileColor', content: '#b0deb7' },
     ],
   },
 };

@@ -1,5 +1,9 @@
+@use '../../styles/colors.scss' as c;
+
 .button {
-  border: 1px solid currentColor;
+  border: 1.5px solid currentColor;
+  outline: 1.5px solid c.$color-vine;
+  outline-offset: 2px;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
   font-family: inherit;
@@ -9,5 +13,5 @@
   border-radius: 0;
   cursor: pointer;
   color: inherit;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: transparentize(c.$color-lime, 0.5);
 }

@@ -1,3 +1,5 @@
+@use '../../styles/colors.scss' as c;
+
 .menu {
   border: none;
   width: 30%;
@@ -8,8 +10,7 @@
   min-height: 100%;
   box-shadow: none !important;
   margin-left: auto;
-  background: white;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  background: c.$color-lime;
   &[open] {
     animation: showDialog 500ms ease-in-out;
     display: flex;
@@ -31,7 +32,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
   }
 }
 .closeButton {
