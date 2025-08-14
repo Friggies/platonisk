@@ -2,21 +2,27 @@
 
 .card {
   position: relative;
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  gap: 1rem;
+  border: 2px solid c.$color-black;
+  outline: 2px solid c.$color-black;
+  outline-offset: 2px;
+  padding-bottom: 0.5rem;
 }
 
 .wishlist {
   position: absolute;
-  color: c.$color-vine;
-  background-color: transparent;
-  border: none;
-  top: 0;
-  right: 0;
+  color: c.$color-black;
+  top: -2px;
+  right: -2px;
   cursor: pointer;
   touch-action: manipulation;
+  background-color: c.$color-white;
+  border: 2px solid c.$color-black;
+  aspect-ratio: 1;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
 }
 
 .link {
@@ -29,9 +35,20 @@
   height: auto;
   display: block;
   aspect-ratio: 1;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 5px,
+    c.$color-black 5px,
+    c.$color-black 10px,
+    transparent 10px,
+    transparent 15px
+  );
 }
 
 .title {
+  padding-top: 0.5rem;
+  border-top: 2px solid c.$color-black;
   font-size: inherit;
   text-transform: uppercase;
   text-decoration: underline;

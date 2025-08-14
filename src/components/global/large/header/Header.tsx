@@ -42,7 +42,7 @@ export default function Header({ isMenuOpen, setMenuOpen }: HeaderProps) {
       </Link>
       <nav className={styles.navigation}>
         <button className={styles.icon} aria-label="Søg">
-          <Search strokeWidth={1} size={30} />
+          <Search size={30} />
         </button>
         <Link
           className={styles.icon}
@@ -50,21 +50,21 @@ export default function Header({ isMenuOpen, setMenuOpen }: HeaderProps) {
           aria-label="Ønskeliste"
         >
           {mounted && hasItems && <span />}
-          <Heart strokeWidth={1} size={30} />
+          <Heart size={30} />
         </Link>
         <button
           className={`snipcart-checkout ${styles.icon}`}
           aria-label="Kurv"
         >
           {cartHasItems && <span />}
-          <ShoppingBasket strokeWidth={1} size={30} />
+          <ShoppingBasket size={30} />
         </button>
         <button
           className={styles.icon}
           aria-label="Menu"
           onClick={() => setMenuOpen(!isMenuOpen)}
         >
-          <MenuIcon strokeWidth={1} size={30} />
+          <MenuIcon size={30} />
         </button>
       </nav>
     </header>

@@ -14,12 +14,6 @@
   gap: 1rem;
   padding: 0.5rem;
   background-attachment: fixed;
-  border-bottom: 2px solid c.$color-vine;
-  box-shadow:
-    0 2px c.$color-lime,
-    0 4px c.$color-vine,
-    0 6px c.$color-lime,
-    0 8px c.$color-vine;
 }
 
 @media (max-width: 600px) {

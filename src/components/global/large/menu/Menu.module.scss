@@ -10,7 +10,7 @@
   min-height: 100%;
   box-shadow: none !important;
   margin-left: auto;
-  background: c.$color-lime;
+  background: c.$color-white;
   &[open] {
     animation: showDialog 500ms ease-in-out;
     display: flex;
@@ -36,9 +36,7 @@
   }
 }
 .closeButton {
-  font-size: 30px;
   text-align: right;
-  width: fit-content;
   margin-left: auto;
 }
 

@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  padding-block: 5rem;
+  padding-block: 4rem;
 }
 .content {
   max-width: 800px;
@@ -13,6 +13,9 @@
 }
 
 @media (max-width: 600px) {
+  .section {
+    padding-block: 3rem;
+  }
   .content {
     text-align: left;
   }

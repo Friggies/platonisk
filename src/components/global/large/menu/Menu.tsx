@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import styles from './Menu.module.scss';
 import Link from 'next/link';
+import { XIcon } from 'lucide-react';
 
 interface MenuProps {
   isOpen: boolean;
@@ -53,7 +54,7 @@ export default function Menu({ isOpen, onClose }: MenuProps) {
         onClick={onClose}
         aria-label="Close menu"
       >
-        &#x2715;
+        <XIcon size={30} />
       </button>
       <Link href="/produkter">Produkter</Link>
       <Link href="/kollektioner">Kollektioner</Link>

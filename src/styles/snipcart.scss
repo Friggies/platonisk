@@ -1,10 +1,10 @@
 @use './colors.scss' as c;
 
 .snipcart-add-item {
-  background-color: c.$color-vine;
+  background-color: c.$color-black;
   color: c.$color-white;
   padding: 0.25rem 0.5rem;
-  outline: 2px solid c.$color-vine;
+  outline: 2px solid c.$color-black;
   outline-offset: 2px;
   width: calc(100% - 8px);
   margin-left: 4px;

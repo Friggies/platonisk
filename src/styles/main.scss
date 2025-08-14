@@ -23,7 +23,7 @@ html {
 
 body {
   color: c.$color-black;
-  background-color: c.$color-lime;
+  background-color: c.$color-white;
   font-family:
     'Instrument Sans',
     -apple-system,
@@ -48,6 +48,7 @@ h4,
 h5,
 h6 {
   text-transform: uppercase;
+  text-wrap: balance;
   font-weight: 600;
 }
 h1 {

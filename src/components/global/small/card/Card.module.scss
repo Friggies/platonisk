@@ -1,8 +1,8 @@
 @use '../../../../styles/colors.scss' as c;
 
 .card {
-  border: 2px solid c.$color-vine;
-  outline: 2px solid c.$color-vine;
+  border: 2px solid c.$color-black;
+  outline: 2px solid c.$color-black;
   outline-offset: 2px;
   width: 100%;
   display: flex;
@@ -17,7 +17,7 @@
 }
 
 .title {
-  background-color: c.$color-vine;
+  background-color: c.$color-black;
   color: c.$color-white;
   padding: 0.5rem;
   font-size: 1.5rem;

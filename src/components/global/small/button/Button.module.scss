@@ -1,17 +1,20 @@
 @use '../../../../styles/colors.scss' as c;
 
 .button {
-  border: 1.5px solid currentColor;
-  outline: 1.5px solid c.$color-vine;
-  outline-offset: 2px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   text-transform: uppercase;
   font-family: inherit;
   font-size: inherit;
   font-weight: 500;
   backdrop-filter: blur(5px);
-  border-radius: 0;
+  border-radius: 0rem;
+  outline: 2px solid c.$color-black;
+  outline-offset: 2px;
   cursor: pointer;
-  color: inherit;
-  background-color: transparentize(c.$color-lime, 0.5);
+  color: c.$color-white;
+  background-color: c.$color-black;
+  transition: 200ms ease-in;
+  &:hover {
+    outline-offset: -2px;
+  }
 }
