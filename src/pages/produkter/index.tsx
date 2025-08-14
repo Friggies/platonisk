@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import { PrintfulProduct } from '../../types';
 import ProductGrid from '../../components/product/ProductGrid';
 import { getAllProducts } from '../../lib/get-all-products';
-import Section from '../../components/section/Section';
+import Section from '../../components/global/small/section/Section';
 
 type IndexProps = {
   products: PrintfulProduct[];

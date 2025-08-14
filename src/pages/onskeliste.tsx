@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Heart } from 'lucide-react';
 import { NextSeo } from 'next-seo';
 import { useEffect, useState } from 'react';
-import Section from '../components/section/Section';
+import Section from '../components/global/small/section/Section';
 
 export default function WishlistPage() {
   const [mounted, setMounted] = useState(false);

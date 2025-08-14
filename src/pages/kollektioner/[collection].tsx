@@ -5,7 +5,7 @@ import { NextSeo } from 'next-seo';
 import { printful } from '../../lib/printful-client';
 import { PrintfulProduct } from '../../types';
 import ProductGrid from '../../components/product/ProductGrid';
-import Section from '../../components/section/Section';
+import Section from '../../components/global/small/section/Section';
 
 interface ExtraProductData {
   printfulId: number;

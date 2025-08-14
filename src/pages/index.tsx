@@ -3,14 +3,14 @@ import { PrintfulProduct } from '../types';
 import ProductGrid from '../components/product/ProductGrid';
 import { NextSeo } from 'next-seo';
 import { getAllProducts } from '../lib/get-all-products';
-import Hero from '../components/hero/Hero';
-import Section from '../components/section/Section';
-import Button from '../components/button/Button';
-import Logorow from '../components/logorow/Logorow';
-import Card from '../components/card/Card';
-import Row from '../components/row/Row';
+import Hero from '../components/global/small/hero/Hero';
+import Section from '../components/global/small/section/Section';
+import Button from '../components/global/small/button/Button';
+import Logorow from '../components/global/small/logorow/Logorow';
+import Card from '../components/global/small/card/Card';
+import Row from '../components/global/small/row/Row';
 import Link from 'next/link';
-import Column from '../components/column/Column';
+import Column from '../components/global/small/column/Column';
 
 type IndexProps = {
   featuredProducts: PrintfulProduct[];

@@ -1,8 +1,8 @@
 import { NextSeo } from 'next-seo';
 import products from '../../data/products.json';
-import Section from '../../components/section/Section';
-import Card from '../../components/card/Card';
-import Column from '../../components/column/Column';
+import Section from '../../components/global/small/section/Section';
+import Card from '../../components/global/small/card/Card';
+import Column from '../../components/global/small/column/Column';
 
 const collections = Array.from(new Set(products.flatMap((p) => p.collection)));
 

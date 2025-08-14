@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styles from './Header.module.scss';
-import useWishlistState from '../../hooks/useWishlistState';
-import useSnipcartCount from '../../hooks/useSnipcartCount';
+import useWishlistState from '../../../../hooks/useWishlistState';
+import useSnipcartCount from '../../../../hooks/useSnipcartCount';
 import { Heart, Menu as MenuIcon, Search, ShoppingBasket } from 'lucide-react';
 import { useEffect, useState } from 'react';
 

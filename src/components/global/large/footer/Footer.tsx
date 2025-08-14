@@ -2,13 +2,12 @@ import Link from 'next/link';
 import styles from './Footer.module.scss';
 import {
   Handshake,
-  HelpCircle,
   Instagram,
   Mail,
   MessageCircleQuestion,
   Truck,
 } from 'lucide-react';
-import Logorow from '../logorow/Logorow';
+import Logorow from '../../small/logorow/Logorow';
 
 export default function Footer() {
   return (
