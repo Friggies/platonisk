@@ -12,7 +12,7 @@ import Row from '../components/global/small/row/Row';
 import Link from 'next/link';
 import Column from '../components/global/small/column/Column';
 import Banner from '../components/global/small/banner/Banner';
-import { HeartIcon, InstagramIcon, StarIcon } from 'lucide-react';
+import { HeartIcon, StarIcon } from 'lucide-react';
 
 type IndexProps = {
   featuredProducts: PrintfulProduct[];
@@ -23,25 +23,15 @@ function Index({ featuredProducts }: IndexProps) {
     <>
       <NextSeo title="Forside" />
       <Hero>
-        <h1>Få pulsen op med CRACKED</h1>
+        <h1>Få pulsen op</h1>
         <Button title="Udforsk kollektion"></Button>
       </Hero>
-      <Banner>
-        <Link href="https://instagram.com/platonisk.dk" target="_blank">
-          <HeartIcon size={12} fill="red" color="transparent" />
-          <StarIcon size={12} fill="yellow" color="transparent" />
-          Følg os på Instagram
-          <StarIcon size={12} fill="yellow" color="transparent" />
-          <HeartIcon size={12} fill="red" color="transparent" />
-        </Link>
-      </Banner>
       <Section>
         <Column>
           <h2>
             Platonisk arbejder for at motivere dig og dine venner til at have en
             fælles aktiv livs&shy;stil, fordi en sund krop og stærke
             ven&shy;skaber er den bedste måde at leve på
-            <HeartIcon color="transparent" fill="red" />
           </h2>
         </Column>
       </Section>

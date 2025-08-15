@@ -88,13 +88,13 @@ export default function ProductPage({ product, relatedProducts }) {
             <button aria-label="Add to wishlist" onClick={addToWishlist}>
               {mounted && onWishlist ? (
                 <h1>
-                  <Heart strokeWidth="1" size="30" fill="#155332" />
                   {product.name}
+                  <Heart size="30" stroke="red" fill="red" />
                 </h1>
               ) : (
                 <h1>
-                  <Heart strokeWidth="1" size="30" />
                   {product.name}
+                  <Heart size="30" />
                 </h1>
               )}
             </button>
@@ -134,7 +134,7 @@ export default function ProductPage({ product, relatedProducts }) {
           </Column>
           <Column>
             <Card
-              title={`Udforsk ${product.collection} kollektionen`}
+              title={`${product.collection}`}
               href={`/kollektioner/${product.collection}`}
             />
             <Link href="/kollektioner" style={{ alignSelf: 'end' }}>

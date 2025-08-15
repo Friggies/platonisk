@@ -8,11 +8,11 @@
   font-weight: 500;
   backdrop-filter: blur(5px);
   border-radius: 0rem;
-  outline: 2px solid c.$color-black;
+  outline: 2px solid c.$color-green;
   outline-offset: 2px;
   cursor: pointer;
-  color: c.$color-white;
-  background-color: c.$color-black;
+  color: c.$color-black;
+  background-color: c.$color-green;
   transition: 200ms ease-in;
   &:hover {
     outline-offset: -2px;
