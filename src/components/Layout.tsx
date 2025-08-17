@@ -4,12 +4,16 @@ import Main from './global/small/main/Main';
 import { useState } from 'react';
 import Menu from './global/large/menu/Menu';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, products }) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   return (
     <>
-      <Header isMenuOpen={isMenuOpen} setMenuOpen={setMenuOpen} />
+      <Header
+        isMenuOpen={isMenuOpen}
+        setMenuOpen={setMenuOpen}
+        products={products}
+      />
       <Menu isOpen={isMenuOpen} onClose={() => setMenuOpen(false)} />
       <Main>{children}</Main>
       <Footer />

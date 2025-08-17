@@ -11,14 +11,13 @@ import Card from '../components/global/small/card/Card';
 import Row from '../components/global/small/row/Row';
 import Link from 'next/link';
 import Column from '../components/global/small/column/Column';
-import Banner from '../components/global/small/banner/Banner';
-import { HeartIcon, StarIcon } from 'lucide-react';
 
 type IndexProps = {
+  products: PrintfulProduct[];
   featuredProducts: PrintfulProduct[];
 };
 
-function Index({ featuredProducts }: IndexProps) {
+function Index({ featuredProducts, products }: IndexProps) {
   return (
     <>
       <NextSeo title="Forside" />
@@ -66,7 +65,7 @@ function Index({ featuredProducts }: IndexProps) {
 export const getStaticProps: GetStaticProps = async () => {
   const products = await getAllProducts();
   const featuredProducts = products.slice(0, 3);
-  return { props: { featuredProducts } };
+  return { props: { featuredProducts, products } };
 };
 
 export default Index;

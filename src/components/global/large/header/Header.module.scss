@@ -1,7 +1,7 @@
 @use '../../../../styles/colors.scss' as c;
 
 .header {
-  padding: 0.5rem 3rem;
+  padding-inline: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,6 +10,7 @@
   z-index: 1;
   transition: 200ms ease-in-out;
   background: transparent;
+  height: 60px;
   span {
     position: absolute;
     top: 0;
@@ -32,8 +33,11 @@
   font-family: 'Instrument Serif';
 }
 .navigation {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
   gap: 1rem;
 }
 
@@ -41,17 +45,39 @@
   position: relative;
 }
 
+.search {
+  width: 100%;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: inherit;
+  border: 2px solid c.$color-green;
+  outline: 2px solid c.$color-green;
+  outline-offset: 2px;
+  font-size: 16px;
+  background-color: white;
+  color: c.$color-black;
+  padding: 5px;
+}
+.searchResults {
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 60px;
+  width: 100%;
+  height: calc(100svh - 60px);
+  max-width: 800px;
+  transform: translate(-50%);
+  padding: 1rem;
+}
+
 @media (max-width: 600px) {
   .header {
-    padding: 0rem 1rem;
+    padding-inline: 1rem;
   }
   .title {
     font-size: 2.5rem;
   }
   .navigation {
-    gap: 0rem;
-  }
-  .icon {
-    transform: scale(0.8);
+    gap: 0.5rem;
   }
 }
