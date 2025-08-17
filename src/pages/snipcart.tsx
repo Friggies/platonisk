@@ -1,3 +1,6 @@
+import { withGlobalStaticProps } from '../lib/with-global-static-props';
+export const getStaticProps = withGlobalStaticProps();
+
 declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {

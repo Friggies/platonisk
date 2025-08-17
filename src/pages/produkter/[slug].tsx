@@ -22,7 +22,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     fallback: false,
   };
 };
-
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const products = await getAllProducts();
   const slug = params!.slug as string;
@@ -34,20 +33,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     (localProduct) => localProduct.external_id === metadata.external_id
   );
 
-  const relatedProducts = products
-    .filter(
-      (p) =>
-        p.external_id !== product.external_id &&
-        p.collection === product.collection
-    )
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 3);
   return {
-    props: { product, relatedProducts },
+    props: { products, product },
   };
 };
 
-export default function ProductPage({ product, relatedProducts }) {
+export default function ProductPage({ products, product }) {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   const { addItem } = useWishlistDispatch();
@@ -73,6 +64,16 @@ export default function ProductPage({ product, relatedProducts }) {
 
   const addToWishlist = () => addItem(product);
   const onWishlist = isSaved(id);
+
+  const relatedProducts = products
+    .filter(
+      (p) =>
+        p.external_id !== product.external_id &&
+        p.collection === product.collection
+    )
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 3);
+
   return (
     <>
       <NextSeo

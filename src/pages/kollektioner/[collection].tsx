@@ -1,53 +1,32 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-import fs from 'fs';
-import path from 'path';
+import { GetStaticPaths } from 'next';
 import { NextSeo } from 'next-seo';
-import { printful } from '../../lib/printful-client';
-import { PrintfulProduct } from '../../types';
 import ProductGrid from '../../components/product/ProductGrid';
 import Section from '../../components/global/small/section/Section';
-
-interface ExtraProductData {
-  printfulId: number;
-  slug: string;
-  collection: string;
-  description: string;
-  images: string[];
-}
-
-type CollectionPageProps = {
-  collection: string;
-  products: Array<PrintfulProduct & ExtraProductData>;
-};
+import localProducts from '../../data/products.json';
+import { withGlobalStaticProps } from '../../lib/with-global-static-props';
+import { PrintfulProduct } from '../../types';
 
 export default function CollectionPage({
   collection,
   products,
-}: CollectionPageProps) {
+}: {
+  collection: string;
+  products: PrintfulProduct[];
+}) {
   return (
     <>
       <NextSeo title={collection} />
-      {products.length > 0 ? (
-        <Section>
-          <h1>{collection}</h1>
-          <ProductGrid products={products} />
-        </Section>
-      ) : (
-        <p>No products found in this collection.</p>
-      )}
+      <Section>
+        <h1>{collection}</h1>
+        <ProductGrid products={products} />
+      </Section>
     </>
   );
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // Load extra data JSON
-  const dataFile = path.join(process.cwd(), 'src', 'data', 'products.json');
-  const raw = fs.readFileSync(dataFile, 'utf8');
-  const extraData: ExtraProductData[] = JSON.parse(raw);
-
-  // Collect unique collections
   const collections = Array.from(
-    new Set(extraData.map((item) => item.collection))
+    new Set(localProducts.map((item) => item.collection))
   );
 
   const paths = collections.map((collection) => ({
@@ -60,54 +39,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<CollectionPageProps> = async ({
-  params,
-}) => {
-  const collection = params?.collection as string;
-
-  // Load extra data JSON
-  const dataFile = path.join(process.cwd(), 'src', 'data', 'products.json');
-  const raw = fs.readFileSync(dataFile, 'utf8');
-  const extraData: ExtraProductData[] = JSON.parse(raw);
-
-  // Fetch Printful product IDs
-  const { result: productIds } = await printful.get('sync/products');
-
-  // Fetch full product details and merge with extraData
-  const allProducts = await Promise.all(
-    productIds.map(({ id }) => printful.get(`sync/products/${id}`))
-  );
-
-  const merged: Array<PrintfulProduct & ExtraProductData> = allProducts.map(
-    ({ result: { sync_product, sync_variants } }) => {
-      const base = {
-        ...sync_product,
-        variants: sync_variants.map(({ name, ...v }) => ({
-          label: name,
-          ...v,
-        })),
-      };
-      const extra = extraData.find((d) => d.printfulId === sync_product.id);
-      return extra
-        ? { ...base, ...extra }
-        : {
-            ...base,
-            printfulId: sync_product.id,
-            slug: base.id.toString(),
-            collection: 'uncategorized',
-            description: '',
-            images: [],
-          };
-    }
-  );
-
-  // Filter by collection
-  const products = merged.filter((p) => p.collection === collection);
+export const getStaticProps = withGlobalStaticProps<{
+  collection: string;
+  products: PrintfulProduct[];
+}>(async ({ params }, { products }) => {
+  const collection = params.collection as string;
+  const filteredProducts = products.filter((p) => p.collection === collection);
 
   return {
     props: {
       collection,
-      products,
+      products: filteredProducts,
     },
   };
-};
+});

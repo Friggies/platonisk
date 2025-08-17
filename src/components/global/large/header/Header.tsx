@@ -46,8 +46,6 @@ export default function Header({
   const { cart } = useSnipcartCount();
   const cartHasItems = cart.items.count !== 0;
 
-  console.log(products);
-
   const searchedProducts = products
     .filter((product) =>
       product.name.toLowerCase().includes(query.toLowerCase())

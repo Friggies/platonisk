@@ -11,13 +11,16 @@ import Card from '../components/global/small/card/Card';
 import Row from '../components/global/small/row/Row';
 import Link from 'next/link';
 import Column from '../components/global/small/column/Column';
+import { withGlobalStaticProps } from '../lib/with-global-static-props';
+export const getStaticProps = withGlobalStaticProps();
 
 type IndexProps = {
   products: PrintfulProduct[];
-  featuredProducts: PrintfulProduct[];
 };
 
-function Index({ featuredProducts, products }: IndexProps) {
+export default function Index({ products }: IndexProps) {
+  const featuredProducts = products.slice(0, 3);
+
   return (
     <>
       <NextSeo title="Forside" />
@@ -61,11 +64,3 @@ function Index({ featuredProducts, products }: IndexProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  const products = await getAllProducts();
-  const featuredProducts = products.slice(0, 3);
-  return { props: { featuredProducts, products } };
-};
-
-export default Index;

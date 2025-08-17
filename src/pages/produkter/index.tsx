@@ -1,9 +1,9 @@
-import { GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
 import { PrintfulProduct } from '../../types';
 import ProductGrid from '../../components/product/ProductGrid';
-import { getAllProducts } from '../../lib/get-all-products';
 import Section from '../../components/global/small/section/Section';
+import { withGlobalStaticProps } from '../../lib/with-global-static-props';
+export const getStaticProps = withGlobalStaticProps();
 
 type IndexProps = {
   products: PrintfulProduct[];
@@ -20,10 +20,5 @@ function Index({ products }: IndexProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  const products = await getAllProducts();
-  return { props: { products } };
-};
 
 export default Index;
