@@ -2,41 +2,49 @@
   {
     "external_id": "687ff53c3aff94",
     "slug": "active-polo-hvid",
+    "name": "Active Polo",
     "categories": ["Polo", "Overdele"],
     "description": "Denne t-shirt fremstår med en markant boxy silhuet, der skaber et moderne og afslappet udtryk, som træder tydeligt frem i ethvert outfit. Den brede halsudskæring med dobbelt syning signalerer både robusthed og et strejf af sofistikeret design, som løfter det enkle snit til noget særligt. De let sænkede skuldre tilfører en ubesværet slouchy attitude, der giver plads til bevægelse og tilfører et cool, nonchalant element til looket. Det bearbejdede, tonede look giver t-shirten en karakteristisk patina, der emmer af retrocharm uden at virke forceret. Den falmede finish tilfører dybde og tekstur til overfladen, så stoffets struktur fremstår levende og interessant ved både tæt og fjernt kig. Labelen er let at fjerne, hvilket efterlader en ren nakkeprofil og sikrer et strømlinet udtryk, der passer til minimalistiske såvel som lag-på-lag-stile. T-shirten er designet med dobbelte nålekanter i bunden og ved ærmegabene, så silhuetten bevarer sin skarpe kant selv efter gentagen brug. De diskrete sidesømme giver en præcis facon, og skulder til skulder-forstærkningen sikrer, at udskæringen fastholder sin form over tid. Dette produkt er det oplagte valg, når du vil skabe et gennemført hverdagslook med et strejf af vintageinspireret kant.",
-    "gender": "uni",
+    "gender": "unisex",
     "color": "hvid",
     "collection": "cracked",
-    "material": "Bomuld (100%)"
+    "material": "Bomuld (100%)",
+    "fit": "Regular"
   },
   {
     "external_id": "6810bc6a549db6",
     "slug": "cracked-t-shirt-sort",
+    "name": "Cracked T-shirt",
     "categories": ["T-shirts", "Overdele"],
     "description": "Denne t-shirt fremstår med en markant boxy silhuet, der skaber et moderne og afslappet udtryk, som træder tydeligt frem i ethvert outfit. Den brede halsudskæring med dobbelt syning signalerer både robusthed og et strejf af sofistikeret design, som løfter det enkle snit til noget særligt. De let sænkede skuldre tilfører en ubesværet slouchy attitude, der giver plads til bevægelse og tilfører et cool, nonchalant element til looket. Det bearbejdede, tonede look giver t-shirten en karakteristisk patina, der emmer af retrocharm uden at virke forceret. Den falmede finish tilfører dybde og tekstur til overfladen, så stoffets struktur fremstår levende og interessant ved både tæt og fjernt kig. Labelen er let at fjerne, hvilket efterlader en ren nakkeprofil og sikrer et strømlinet udtryk, der passer til minimalistiske såvel som lag-på-lag-stile. T-shirten er designet med dobbelte nålekanter i bunden og ved ærmegabene, så silhuetten bevarer sin skarpe kant selv efter gentagen brug. De diskrete sidesømme giver en præcis facon, og skulder til skulder-forstærkningen sikrer, at udskæringen fastholder sin form over tid. Dette produkt er det oplagte valg, når du vil skabe et gennemført hverdagslook med et strejf af vintageinspireret kant.",
-    "gender": "uni",
+    "gender": "unisex",
     "color": "sort",
     "collection": "cracked",
-    "material": "Bomuld (100%)"
+    "material": "Bomuld (100%)",
+    "fit": "Oversized boxy"
   },
   {
     "external_id": "6810bdaf05abc4",
     "slug": "cracked-t-shirt-hvid",
+    "name": "Cracked T-shirt",
     "categories": ["T-shirts", "Overdele"],
     "description": "Denne t-shirt fremstår med en markant boxy silhuet, der skaber et moderne og afslappet udtryk, som træder tydeligt frem i ethvert outfit. Den brede halsudskæring med dobbelt syning signalerer både robusthed og et strejf af sofistikeret design, som løfter det enkle snit til noget særligt. De let sænkede skuldre tilfører en ubesværet slouchy attitude, der giver plads til bevægelse og tilfører et cool, nonchalant element til looket. Det bearbejdede, tonede look giver t-shirten en karakteristisk patina, der emmer af retrocharm uden at virke forceret. Den falmede finish tilfører dybde og tekstur til overfladen, så stoffets struktur fremstår levende og interessant ved både tæt og fjernt kig. Labelen er let at fjerne, hvilket efterlader en ren nakkeprofil og sikrer et strømlinet udtryk, der passer til minimalistiske såvel som lag-på-lag-stile. T-shirten er designet med dobbelte nålekanter i bunden og ved ærmegabene, så silhuetten bevarer sin skarpe kant selv efter gentagen brug. De diskrete sidesømme giver en præcis facon, og skulder til skulder-forstærkningen sikrer, at udskæringen fastholder sin form over tid. Dette produkt er det oplagte valg, når du vil skabe et gennemført hverdagslook med et strejf af vintageinspireret kant.",
-    "gender": "uni",
+    "gender": "unisex",
     "color": "hvid",
     "collection": "cracked",
-    "material": "Bomuld (100%)"
+    "material": "Bomuld (100%)",
+    "fit": "Oversized boxy"
   },
   {
     "external_id": "6810be1e558751",
     "slug": "cracked-cap",
+    "name": "Cracked Cap",
     "categories": ["Tilbehør", "Hatte"],
     "description": "Denne cap har et moderne, lavt fem-panel design som krammer hovedet med et blødt men struktureret udtryk. Den giver et rent og urbant look, som både virker sporty og stilfuldt. Små metaløjer på hver side sikrer frisk luft og et subtilt funktionelt touch. Bagsiden er udstyret med en nylonstrop med clip-lukning, der gør den nem at tilpasse for optimal pasform og skaber en glat, minimalistisk finish. Med en komfort-venlig form og en let skygge ser den skulpturel ud, samtidig med at den er praktisk til alle hverdags- og eventyrsituationer. Den dækker hovedomkreds fra cirka 48 til 56 cm, hvilket sikrer en god og fleksibel pasform til de fleste. En cap der kombinerer attitude og brugervenlighed.",
-    "gender": "uni",
+    "gender": "unisex",
     "color": "hvid",
     "collection": "cracked",
-    "material": "Bomuld (100%)"
+    "material": "Bomuld (100%)",
+    "fit": "One size (48cm - 56cm)"
   }
 ]

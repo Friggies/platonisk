@@ -29,13 +29,7 @@
   height: auto;
   display: block;
   aspect-ratio: 1;
-  background: repeating-linear-gradient(
-    45deg,
-    darken(c.$color-white, 5) 0,
-    darken(c.$color-white, 5) 10px,
-    darken(c.$color-white, 10) 10px,
-    darken(c.$color-white, 10) 20px
-  );
+  background: c.$color-gradient;
 }
 
 .title {

@@ -3,9 +3,20 @@ import ProductVariantPicker from '../../components/product/ProductVariantPicker'
 import useWishlistState from '../../hooks/useWishlistState';
 import useWishlistDispatch from '../../hooks/useWishlistDispatch';
 import { useEffect, useState } from 'react';
-import { Heart } from 'lucide-react';
+import {
+  Heart,
+  LeafIcon,
+  MarsIcon,
+  PenTool,
+  RulerIcon,
+  StarIcon,
+  TruckIcon,
+  VenusAndMarsIcon,
+  VenusIcon,
+} from 'lucide-react';
 import { getAllProducts } from '../../lib/get-all-products';
 import localProducts from '../../data/products.json';
+import reviews from '../../data/reviews.json';
 import Section from '../../components/global/small/section/Section';
 import Row from '../../components/global/small/row/Row';
 import Column from '../../components/global/small/column/Column';
@@ -15,6 +26,9 @@ import Card from '../../components/global/small/card/Card';
 import Link from 'next/link';
 import ProductGrid from '../../components/product/ProductGrid';
 import { NextSeo } from 'next-seo';
+import ProductStars from '../../components/product/ProductStars';
+import GenderIcon from '../../components/product/ProductGenderIcon';
+import ProductTags from '../../components/product/ProductTags';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
@@ -74,6 +88,15 @@ export default function ProductPage({ products, product }) {
     .sort(() => Math.random() - 0.5)
     .slice(0, 3);
 
+  const ratings = reviews.filter(
+    (review) => review.external_id === product.external_id
+  );
+
+  const rating = ratings.reduce(
+    (acc, review, _, arr) => acc + review.rating / arr.length,
+    0
+  );
+
   return (
     <>
       <NextSeo
@@ -99,9 +122,27 @@ export default function ProductPage({ products, product }) {
                 </h1>
               )}
             </button>
+            {rating ? (
+              <div>
+                <ProductStars rating={rating} />
+                <p>
+                  {rating}/5{' '}
+                  <Link href="#ratings">
+                    ({ratings.length}
+                    {ratings.length !== 1
+                      ? ' verificerede anmeldelser'
+                      : ' verificeret anmeldelse'}
+                    )
+                  </Link>
+                </p>
+              </div>
+            ) : (
+              ''
+            )}
             <p>
               <strong>{formattedPrice}</strong>
             </p>
+            <ProductTags product={product} />
             <ProductVariantPicker
               value={activeVariantExternalId}
               onChange={({ target: { value } }) =>
@@ -130,6 +171,8 @@ export default function ProductPage({ products, product }) {
           <Column>
             <h2>Produkt&shy;information</h2>
             <p>{product.description}</p>
+            <h3>Pasform</h3>
+            <p>{product.fit} fit</p>
             <h3>Materiale</h3>
             <p>{product.material}</p>
           </Column>

@@ -4,14 +4,5 @@
   width: 100%;
   max-width: 320px;
   object-fit: cover;
-  background: radial-gradient(circle, #e1e1e1 50%, #d3d3d3 100%);
-  background: repeating-linear-gradient(
-    45deg,
-    #e1e1e1 0,
-    #e1e1e1 10px,
-    #d3d3d3 10px,
-    #d3d3d3 14px,
-    #e1e1e1 14px,
-    #e1e1e1 24px
-  );
+  background: c.$color-gradient;
 }

@@ -1,7 +1,7 @@
 @use './colors.scss' as c;
 
 .snipcart-add-item {
-  background-color: c.$color-blue;
+  background: c.$color-blue;
   color: c.$color-white;
   padding: 0.25rem 0.5rem;
   outline: 2px solid c.$color-blue;

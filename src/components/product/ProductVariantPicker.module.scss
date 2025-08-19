@@ -1,7 +1,6 @@
 @use '../../styles/colors.scss' as c;
 
 .selectWrapper {
-  margin-top: auto;
   position: relative;
   width: 100%;
 }
@@ -11,7 +10,7 @@
   text-align: center;
   -webkit-appearance: none;
   -moz-appearance: none;
-  border: 2px solid c.$color-green;
+  border: 2px solid c.$color-blue;
   font-family: inherit;
   background-color: transparent;
   backdrop-filter: blur(1px);
@@ -30,5 +29,5 @@
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  color: c.$color-black;
+  color: c.$color-blue;
 }

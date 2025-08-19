@@ -3,8 +3,6 @@ import products from '../../data/products.json';
 import Section from '../../components/global/small/section/Section';
 import Card from '../../components/global/small/card/Card';
 import Column from '../../components/global/small/column/Column';
-import { withGlobalStaticProps } from '../../lib/with-global-static-props';
-export const getStaticProps = withGlobalStaticProps();
 
 const collections = Array.from(new Set(products.flatMap((p) => p.collection)));
 

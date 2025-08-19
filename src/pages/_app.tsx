@@ -9,7 +9,7 @@ import { getAllProducts } from '../lib/get-all-products';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WishlistProvider>
-      <Layout products={pageProps.products}>
+      <Layout>
         <DefaultSeo {...defaultSEO} />
         <Component {...pageProps} />
       </Layout>

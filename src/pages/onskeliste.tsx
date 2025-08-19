@@ -5,8 +5,6 @@ import { Heart } from 'lucide-react';
 import { NextSeo } from 'next-seo';
 import { useEffect, useState } from 'react';
 import Section from '../components/global/small/section/Section';
-import { withGlobalStaticProps } from '../lib/with-global-static-props';
-export const getStaticProps = withGlobalStaticProps();
 
 export default function WishlistPage() {
   const [mounted, setMounted] = useState(false);

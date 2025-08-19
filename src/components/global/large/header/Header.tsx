@@ -10,20 +10,15 @@ import {
   XIcon,
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { PrintfulProduct } from '../../../../types';
 import ProductGrid from '../../../product/ProductGrid';
+import products from '../../../../data/products.json';
 
 interface HeaderProps {
   isMenuOpen: boolean;
   setMenuOpen: (open: boolean) => void;
-  products: PrintfulProduct[];
 }
 
-export default function Header({
-  isMenuOpen,
-  setMenuOpen,
-  products,
-}: HeaderProps) {
+export default function Header({ isMenuOpen, setMenuOpen }: HeaderProps) {
   const [mounted, setMounted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [searching, setSearching] = useState(false);

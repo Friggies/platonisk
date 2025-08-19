@@ -1,0 +1,34 @@
+@use '../../styles/colors.scss' as c;
+@use 'sass:color';
+
+.tags {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  li {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: color.adjust(c.$color-white, $lightness: 5%);
+    border-radius: 5px;
+    overflow: hidden;
+    &:last-of-type {
+      padding: 0;
+      justify-content: space-between;
+      span {
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      img {
+        height: 29.56px;
+        width: auto;
+        aspect-ratio: 1.5;
+      }
+    }
+  }
+}

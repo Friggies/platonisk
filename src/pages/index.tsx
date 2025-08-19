@@ -1,8 +1,5 @@
-import { GetStaticProps } from 'next';
-import { PrintfulProduct } from '../types';
 import ProductGrid from '../components/product/ProductGrid';
 import { NextSeo } from 'next-seo';
-import { getAllProducts } from '../lib/get-all-products';
 import Hero from '../components/global/small/hero/Hero';
 import Section from '../components/global/small/section/Section';
 import Button from '../components/global/small/button/Button';
@@ -11,14 +8,15 @@ import Card from '../components/global/small/card/Card';
 import Row from '../components/global/small/row/Row';
 import Link from 'next/link';
 import Column from '../components/global/small/column/Column';
-import { withGlobalStaticProps } from '../lib/with-global-static-props';
-export const getStaticProps = withGlobalStaticProps();
+import { getAllProducts } from '../lib/get-all-products';
 
-type IndexProps = {
-  products: PrintfulProduct[];
+export const getStaticProps = async () => {
+  const products = await getAllProducts();
+  return {
+    props: { products },
+  };
 };
-
-export default function Index({ products }: IndexProps) {
+export default function Index({ products }) {
   const featuredProducts = products.slice(0, 3);
 
   return (

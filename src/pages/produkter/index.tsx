@@ -1,15 +1,16 @@
 import { NextSeo } from 'next-seo';
-import { PrintfulProduct } from '../../types';
 import ProductGrid from '../../components/product/ProductGrid';
 import Section from '../../components/global/small/section/Section';
-import { withGlobalStaticProps } from '../../lib/with-global-static-props';
-export const getStaticProps = withGlobalStaticProps();
+import { getAllProducts } from '../../lib/get-all-products';
 
-type IndexProps = {
-  products: PrintfulProduct[];
+export const getStaticProps = async () => {
+  const products = await getAllProducts();
+  return {
+    props: { products },
+  };
 };
 
-function Index({ products }: IndexProps) {
+function Index({ products }) {
   return (
     <>
       <NextSeo title="Alle Produkter" />
