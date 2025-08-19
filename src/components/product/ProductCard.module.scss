@@ -2,23 +2,16 @@
 
 .card {
   position: relative;
-  text-align: center;
-  border: 2px solid c.$color-green;
-  outline: 2px solid c.$color-green;
-  outline-offset: 2px;
-  padding-bottom: 0.5rem;
   background-color: c.$color-white;
 }
 
 .wishlist {
   position: absolute;
   color: c.$color-black;
-  top: -2px;
-  right: -2px;
+  top: 0px;
+  right: 0px;
   cursor: pointer;
   touch-action: manipulation;
-  background-color: c.$color-white;
-  border: 2px solid c.$color-green;
   aspect-ratio: 1;
   width: 40px;
   height: 40px;
@@ -38,20 +31,16 @@
   aspect-ratio: 1;
   background: repeating-linear-gradient(
     45deg,
-    transparent 0,
-    transparent 5px,
-    c.$color-green 5px,
-    c.$color-green 10px,
-    transparent 10px,
-    transparent 15px
+    darken(c.$color-white, 5) 0,
+    darken(c.$color-white, 5) 10px,
+    darken(c.$color-white, 10) 10px,
+    darken(c.$color-white, 10) 20px
   );
 }
 
 .title {
   padding-top: 0.5rem;
-  border-top: 2px solid c.$color-green;
   font-size: inherit;
   text-transform: uppercase;
-  text-decoration: underline;
   font-weight: 500;
 }
