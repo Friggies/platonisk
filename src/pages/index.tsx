@@ -35,6 +35,15 @@ export default function Index({ products }) {
           </h2>
         </Column>
       </Section>
+      <Section>
+        <Column>
+          <Row>
+            <Card href="/kollektioner/mmxxvi" title="Herretøj" />
+            <Card href="/kollektioner/cracked" title="Dametøj" />
+            <Card href="/kollektioner/cracked" title="Accessories" />
+          </Row>
+        </Column>
+      </Section>
       <Logorow />
       <Section>
         <Column>
@@ -49,7 +58,6 @@ export default function Index({ products }) {
           </Link>
         </Column>
       </Section>
-      <Logorow />
       <Section>
         <Column>
           <h2>Populære produkter</h2>

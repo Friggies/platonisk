@@ -1,10 +1,11 @@
 @use './colors.scss' as c;
+@use 'sass:color';
 
 .snipcart-add-item {
-  background: c.$color-blue;
+  background-color: color.adjust(c.$color-gradient-silver, $lightness: -5%);
   color: c.$color-white;
   padding: 0.25rem 0.5rem;
-  outline: 2px solid c.$color-blue;
+  outline: 2px solid color.adjust(c.$color-gradient-silver, $lightness: -5%);
   outline-offset: 2px;
   width: calc(100% - 8px);
   margin-left: 4px;
