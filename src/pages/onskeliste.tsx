@@ -24,7 +24,7 @@ export default function WishlistPage() {
           <>
             <p>
               Tilføj produkter til din ønskeliste ved at trykke på{' '}
-              <Heart color="red" fill="red" size="16" /> ikonet.
+              <Heart color="#e61937" fill="#e61937" size="16" /> ikonet.
             </p>
             <Link href="/" className="link">
               Gå til boutique

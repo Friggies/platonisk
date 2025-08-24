@@ -28,7 +28,7 @@ export default function Index({ products }) {
       </Hero>
       <Section>
         <Column>
-          <h2>
+          <h2 className="manchette">
             Platonisk arbejder for at motivere dig og dine venner til at have en
             fælles aktiv livs&shy;stil, fordi en sund krop og stærke
             ven&shy;skaber er den bedste måde at leve på

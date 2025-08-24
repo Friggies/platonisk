@@ -49,7 +49,11 @@ const ProductCard = (product) => {
         aria-label="Add to wishlist"
         onClick={addToWishlist}
       >
-        {mounted && onWishlist ? <Heart fill="red" color="red" /> : <Heart />}
+        {mounted && onWishlist ? (
+          <Heart fill="#e61937" color="#e61937" />
+        ) : (
+          <Heart />
+        )}
       </button>
     </div>
   );

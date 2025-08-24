@@ -48,17 +48,15 @@ h4,
 h5,
 h6 {
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
 }
 h1 {
   font-size: 2.5rem;
-  font-family: 'Instrument Serif';
-  font-weight: 400;
+  letter-spacing: -2px;
 }
 
-.serif {
-  font-family: 'Instrument Serif';
-  font-weight: 400;
+.manchette {
+  font-size: 1.25em;
 }
 
 button {

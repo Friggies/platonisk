@@ -3,17 +3,6 @@ import ProductVariantPicker from '../../components/product/ProductVariantPicker'
 import useWishlistState from '../../hooks/useWishlistState';
 import useWishlistDispatch from '../../hooks/useWishlistDispatch';
 import { useEffect, useState } from 'react';
-import {
-  Heart,
-  LeafIcon,
-  MarsIcon,
-  PenTool,
-  RulerIcon,
-  StarIcon,
-  TruckIcon,
-  VenusAndMarsIcon,
-  VenusIcon,
-} from 'lucide-react';
 import { getAllProducts } from '../../lib/get-all-products';
 import localProducts from '../../data/products.json';
 import reviews from '../../data/reviews.json';
@@ -27,8 +16,8 @@ import Link from 'next/link';
 import ProductGrid from '../../components/product/ProductGrid';
 import { NextSeo } from 'next-seo';
 import ProductStars from '../../components/product/ProductStars';
-import GenderIcon from '../../components/product/ProductGenderIcon';
 import ProductTags from '../../components/product/ProductTags';
+import ProductTitle from '../../components/product/ProductTitle';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
@@ -109,19 +98,7 @@ export default function ProductPage({ products, product }) {
             <ProductImage src={product.thumbnail_url} />
           </Column>
           <Column>
-            <button aria-label="Add to wishlist" onClick={addToWishlist}>
-              {mounted && onWishlist ? (
-                <h1>
-                  {product.name}
-                  <Heart size="30" stroke="red" fill="red" />
-                </h1>
-              ) : (
-                <h1>
-                  {product.name}
-                  <Heart size="30" />
-                </h1>
-              )}
-            </button>
+            <ProductTitle product={product} />
             {rating ? (
               <div>
                 <ProductStars rating={rating} />
@@ -152,7 +129,7 @@ export default function ProductPage({ products, product }) {
               disabled={oneStyle}
             />
             <button
-              className="snipcart-add-item serif"
+              className="snipcart-add-item"
               data-item-id={activeVariantExternalId}
               data-item-price={activeVariant.retail_price}
               data-item-url={`/api/products/${activeVariantExternalId}`}

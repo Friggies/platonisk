@@ -12,7 +12,7 @@ export default function Card({ href, title }) {
         height="300"
         alt={title}
       />
-      <div className={`${styles.title} serif`}>{title}</div>
+      <div className={styles.title}>{title}</div>
     </Link>
   );
 }

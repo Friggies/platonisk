@@ -13,7 +13,7 @@
   -moz-appearance: none;
   border: 2px solid color.adjust(c.$color-gradient-silver, $lightness: -5%);
   font-family: inherit;
-  background-color: transparent;
+  background-color: white;
   backdrop-filter: blur(1px);
   color: c.$color-black;
   width: 100%;
@@ -30,5 +30,5 @@
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  color: c.$color-blue;
+  color: color.adjust(c.$color-gradient-silver, $lightness: -5%);
 }
