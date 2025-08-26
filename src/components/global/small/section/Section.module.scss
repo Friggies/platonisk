@@ -9,7 +9,6 @@
   max-width: 800px;
   padding-inline: 1rem;
   margin: auto;
-  text-align: justify;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -18,8 +17,5 @@
 @media (max-width: 600px) {
   .section {
     padding-block: 3rem;
-  }
-  .content {
-    text-align: left;
   }
 }
