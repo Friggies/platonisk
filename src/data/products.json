@@ -9,7 +9,9 @@
     "color": "hvid",
     "collection": "cracked",
     "material": "Bomuld (100%)",
-    "fit": "Regular"
+    "fit": "Regular",
+    "price": 299.95,
+    "old_price": 399.95
   },
   {
     "external_id": "6810bc6a549db6",
@@ -42,9 +44,9 @@
     "categories": ["Tilbehør", "Hatte"],
     "description": "Denne cap har et moderne, lavt fem-panel design som krammer hovedet med et blødt men struktureret udtryk. Den giver et rent og urbant look, som både virker sporty og stilfuldt. Små metaløjer på hver side sikrer frisk luft og et subtilt funktionelt touch. Bagsiden er udstyret med en nylonstrop med clip-lukning, der gør den nem at tilpasse for optimal pasform og skaber en glat, minimalistisk finish. Med en komfort-venlig form og en let skygge ser den skulpturel ud, samtidig med at den er praktisk til alle hverdags- og eventyrsituationer. Den dækker hovedomkreds fra cirka 48 til 56 cm, hvilket sikrer en god og fleksibel pasform til de fleste. En cap der kombinerer attitude og brugervenlighed.",
     "gender": "unisex",
-    "color": "hvid",
+    "color": "sort",
     "collection": "cracked",
     "material": "Bomuld (100%)",
-    "fit": "One size (48cm - 56cm)"
+    "fit": "48cm - 56cm"
   }
 ]

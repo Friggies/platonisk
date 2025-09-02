@@ -16,5 +16,5 @@ export const formatVariantLabel = (variantName: string): string => {
   if (sizeMap[lowerSize]) {
     return sizeMap[lowerSize];
   }
-  return size ? size : 'Størrelse: OS';
+  return size ? size : 'Størrelse: One size';
 };

@@ -1,0 +1,12 @@
+.input {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 1rem;
+  input {
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    font-size: 16px;
+  }
+}
