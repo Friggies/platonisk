@@ -1,4 +1,4 @@
-import styles from './searchInput.module.scss';
+import styles from './SearchInput.module.scss';
 
 export default function SearchInput({ value, onChange }) {
   return (
