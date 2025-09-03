@@ -7,6 +7,7 @@ import SearchContainer from '../../components/search/SearchContainer';
 import SearchInput from '../../components/search/SearchInput';
 import { getAllProducts } from '../../lib/get-all-products';
 import FacetDropdown from '../../components/search/FacetDropdown';
+import SearchTags from '../../components/search/SearchTags';
 
 export const getStaticProps = async () => {
   const products = await getAllProducts();
@@ -95,47 +96,47 @@ function Index({ products }) {
     if (query && query.trim())
       arr.push({
         key: `query:${query}`,
-        label: `Søg: ${query}`,
+        label: `${query}`,
         remove: () => setQuery(''),
       });
     (categories || []).forEach((v) =>
       arr.push({
         key: `cat:${v}`,
-        label: `Kategori: ${v}`,
+        label: `${v}`,
         remove: () => setCategories((prev) => prev.filter((x) => x !== v)),
       })
     );
     if (gender)
       arr.push({
         key: `gender:${gender}`,
-        label: `Køn: ${gender}`,
+        label: `${gender}`,
         remove: () => setGender(undefined),
       });
     (colors || []).forEach((v) =>
       arr.push({
         key: `color:${v}`,
-        label: `Farve: ${v}`,
+        label: `${v}`,
         remove: () => setColors((prev) => prev.filter((x) => x !== v)),
       })
     );
     (collections || []).forEach((v) =>
       arr.push({
         key: `col:${v}`,
-        label: `Kollektion: ${v}`,
+        label: `${v}`,
         remove: () => setCollections((prev) => prev.filter((x) => x !== v)),
       })
     );
     (materials || []).forEach((v) =>
       arr.push({
         key: `mat:${v}`,
-        label: `Materiale: ${v}`,
+        label: `${v}`,
         remove: () => setMaterials((prev) => prev.filter((x) => x !== v)),
       })
     );
     (fits || []).forEach((v) =>
       arr.push({
         key: `fit:${v}`,
-        label: `Fit: ${v}`,
+        label: `${v}`,
         remove: () => setFits((prev) => prev.filter((x) => x !== v)),
       })
     );
@@ -216,42 +217,16 @@ function Index({ products }) {
           </button>
         </div>
 
-        {chips.length > 0 && (
-          <div className="chips" aria-label="Aktive filtre">
-            {chips.map((c) => (
-              <button
-                key={c.key}
-                className="chip"
-                onClick={c.remove}
-                aria-label={`Fjern ${c.label}`}
-              >
-                <span>{c.label}</span>
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M3 3l6 6M9 3L3 9"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </button>
-            ))}
-            <button type="button" className="clearBtn small" onClick={clearAll}>
-              Ryd alle
-            </button>
-          </div>
-        )}
+        {chips.length > 0 && <SearchTags tags={chips} />}
 
-        <p style={{ opacity: 0.7, marginTop: 8 }}>
-          {filtered.length} produkter
+        <p>
+          {filtered.length === 0
+            ? 'Ingen produkter'
+            : filtered.length === 1
+              ? '1 produkt'
+              : `${filtered.length} produkter`}{' '}
         </p>
 
-        {/* Pass both filtered products and the active filters to the grid (in case it wants to display tags/badges) */}
         <ProductGrid products={filtered} />
       </Section>
     </>
