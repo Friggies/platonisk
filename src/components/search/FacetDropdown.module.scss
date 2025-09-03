@@ -50,3 +50,11 @@
 .facetTrigger.open .chev {
   transform: rotate(180deg);
 }
+
+@media (max-width: 640px) {
+  .facet {
+    width: 33%;
+    width: calc(100% / 3 - 4px);
+    flex: auto;
+  }
+}

@@ -2,16 +2,8 @@ import Link from 'next/link';
 import styles from './Header.module.scss';
 import useWishlistState from '../../../../hooks/useWishlistState';
 import useSnipcartCount from '../../../../hooks/useSnipcartCount';
-import {
-  Heart,
-  Menu as MenuIcon,
-  Search,
-  ShoppingBasket,
-  XIcon,
-} from 'lucide-react';
+import { Heart, Menu as MenuIcon, Search, ShoppingBasket } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import ProductGrid from '../../../product/ProductGrid';
-import products from '../../../../data/products.json';
 
 interface HeaderProps {
   isMenuOpen: boolean;

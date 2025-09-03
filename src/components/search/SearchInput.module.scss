@@ -1,6 +1,6 @@
 .input {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: center;
   input {
     width: 100%;
@@ -8,9 +8,23 @@
     padding: 0.75rem;
     font-size: 16px;
     font-family: inherit;
+    border-radius: 0;
   }
   label {
     color: white;
     padding: 0.75rem;
+  }
+}
+
+.sortbutton {
+  color: white;
+  padding: 0.75rem;
+  display: grid;
+  place-items: center;
+}
+
+@media (min-width: 640px) {
+  .sortbutton {
+    display: none;
   }
 }

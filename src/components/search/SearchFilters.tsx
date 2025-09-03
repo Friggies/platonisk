@@ -1,5 +1,9 @@
 import styles from './SearchFilters.module.scss';
 
-export default function SearchFilters({ children }) {
-  return <div className={styles.filters}>{children}</div>;
+export default function SearchFilters({ children, showFilters }) {
+  return (
+    <div className={`${styles.filters} ${showFilters && styles.show}`}>
+      {children}
+    </div>
+  );
 }

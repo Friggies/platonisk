@@ -1,7 +1,7 @@
 import { NextSeo } from 'next-seo';
 import ProductGrid from '../../components/product/ProductGrid';
 import Section from '../../components/global/small/section/Section';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import SearchFilters from '../../components/search/SearchFilters';
 import SearchContainer from '../../components/search/SearchContainer';
 import SearchInput from '../../components/search/SearchInput';
@@ -73,6 +73,8 @@ function Index({ products }) {
   const [collections, setCollections] = useState([]); // multi
   const [materials, setMaterials] = useState([]); // multi (adjust if you want single)
   const [fits, setFits] = useState([]); // multi
+
+  const [showFilters, setShowFilters] = useState(false);
 
   const filtered = useMemo(
     () =>
@@ -156,8 +158,13 @@ function Index({ products }) {
       <Section>
         <h1>Alle produkter</h1>
         <SearchContainer>
-          <SearchInput value={query} onChange={setQuery} />
-          <SearchFilters>
+          <SearchInput
+            value={query}
+            onChange={setQuery}
+            setShowFilters={setShowFilters}
+            showFilters={showFilters}
+          />
+          <SearchFilters showFilters={showFilters}>
             <FacetDropdown
               mode="multi"
               title="Kategorie"
