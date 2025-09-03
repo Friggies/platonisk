@@ -1,10 +1,10 @@
 import { NextSeo } from 'next-seo';
 import ProductGrid from '../../components/product/ProductGrid';
 import Section from '../../components/global/small/section/Section';
-import { useMemo, useState, useEffect, useRef } from 'react';
+import { useMemo, useState } from 'react';
 import SearchFilters from '../../components/search/SearchFilters';
-import SearchContainer from '../../components/search/searchContainer';
-import SearchInput from '../../components/search/searchInput';
+import SearchContainer from '../../components/search/SearchContainer';
+import SearchInput from '../../components/search/SearchInput';
 import { getAllProducts } from '../../lib/get-all-products';
 import FacetDropdown from '../../components/search/FacetDropdown';
 
