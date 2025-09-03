@@ -160,7 +160,7 @@ function Index({ products }) {
           <SearchFilters>
             <FacetDropdown
               mode="multi"
-              title="Kategorier"
+              title="Kategorie"
               options={facets.categories}
               selected={categories}
               onChange={setCategories}
@@ -174,28 +174,28 @@ function Index({ products }) {
             />
             <FacetDropdown
               mode="multi"
-              title="Farver"
+              title="Farve"
               options={facets.colors}
               selected={colors}
               onChange={setColors}
             />
             <FacetDropdown
               mode="multi"
-              title="Kollektioner"
+              title="Kollektion"
               options={facets.collections}
               selected={collections}
               onChange={setCollections}
             />
             <FacetDropdown
               mode="multi"
-              title="Materialer"
+              title="Materiale"
               options={facets.materials}
               selected={materials}
               onChange={setMaterials}
             />
             <FacetDropdown
               mode="multi"
-              title="Fits"
+              title="Fit"
               options={facets.fits}
               selected={fits}
               onChange={setFits}

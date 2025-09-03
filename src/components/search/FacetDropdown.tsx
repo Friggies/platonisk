@@ -65,30 +65,26 @@ export default function FacetDropdown({
               ? 1
               : 0;
           return count ? (
-            <span
-              className={styles.countBadge}
-              aria-label={`${count} aktive filtre`}
+            <span aria-label={`${count} aktive filtre`}>({count})</span>
+          ) : (
+            <svg
+              className={styles.chev}
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
             >
-              {count}
-            </span>
-          ) : null;
+              <path
+                d="M6 9l6 6 6-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          );
         })()}
-        <svg
-          className="chev"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path
-            d="M6 9l6 6 6-6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
       </button>
 
       {open && (

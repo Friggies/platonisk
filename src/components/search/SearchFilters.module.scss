@@ -1,7 +1,10 @@
+@use '../../styles/colors.scss' as c;
+@use 'sass:color';
+
 .filters {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 2px;
-  background-color: black;
+  background-color: color.adjust(c.$color-gradient-silver, $lightness: -5%);
 }
