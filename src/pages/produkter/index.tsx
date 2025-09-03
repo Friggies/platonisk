@@ -3,8 +3,8 @@ import ProductGrid from '../../components/product/ProductGrid';
 import Section from '../../components/global/small/section/Section';
 import { useMemo, useState } from 'react';
 import SearchFilters from '../../components/search/SearchFilters';
-import SearchContainer from '../../components/search/SearchContainer';
-import SearchInput from '../../components/search/SearchInput';
+import SearchContainer from '../../components/search/SearchContainer-temp';
+import SearchInput from '../../components/search/SearchInput-temp';
 import { getAllProducts } from '../../lib/get-all-products';
 import FacetDropdown from '../../components/search/FacetDropdown';
 
