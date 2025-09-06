@@ -168,7 +168,7 @@ function Index({ products }) {
           <SearchFilters showFilters={showFilters}>
             <FacetDropdown
               mode="multi"
-              title="Kategorie"
+              title="Kategori"
               options={facets.categories}
               selected={categories}
               onChange={setCategories}
