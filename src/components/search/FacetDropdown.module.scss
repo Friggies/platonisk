@@ -7,6 +7,7 @@
   width: 100%;
   text-align: left;
   background: #fff;
+  color: black;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -17,13 +18,12 @@
 .facetMenu {
   position: absolute;
   z-index: 20;
-  top: calc(100% + 6px);
+  top: calc(100% + 2px);
   left: 0;
   right: 0;
   max-height: 260px;
   overflow: auto;
   border: 1px solid #eee;
-  border-radius: 10px;
   background: #fff;
   padding: 10px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
@@ -35,8 +35,9 @@
   padding: 4px;
 }
 .row:hover {
-  background: #fafafa;
-  border-radius: 8px;
+  background: #f2f2f2;
+  border-radius: 4px;
+  cursor: pointer;
 }
 .menuActions {
   display: flex;
