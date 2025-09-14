@@ -44,7 +44,7 @@ export default function Header({ isMenuOpen, setMenuOpen }: HeaderProps) {
         <nav className={styles.navigation}>
           <Link
             className={styles.icon}
-            href="/produkter#sog"
+            href="/produkter"
             aria-label="Søg efter produkter"
           >
             <Search />
