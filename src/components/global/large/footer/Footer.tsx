@@ -1,12 +1,5 @@
 import Link from 'next/link';
 import styles from './Footer.module.scss';
-import {
-  Handshake,
-  Instagram,
-  Mail,
-  MessageCircleQuestion,
-  Truck,
-} from 'lucide-react';
 import Logorow from '../../small/logorow/Logorow';
 
 export default function Footer() {
@@ -14,26 +7,27 @@ export default function Footer() {
     <footer className={styles.footer}>
       <Logorow />
       <nav className={styles.nav}>
-        <Link href="https://instagram.com/platonisk.dk" target="_blank">
-          <Instagram />
-          Instagram
+        <Link className={styles.title} href="/">
+          Platonisk
         </Link>
-        <Link href="/levering">
-          <Truck />
-          Levering
-        </Link>
-        <Link href="/handelsbetingelser">
-          <Handshake />
-          Handelsbetingelser
-        </Link>
-        <Link href="/kontakt">
-          <Mail />
-          Kontakt
-        </Link>
-        <Link href="/hjalp">
-          <MessageCircleQuestion strokeWidth="1" size="30" />
-          Hjælp
-        </Link>
+        <ul className={styles.list}>
+          <li>
+            <Link href="/levering">Levering</Link>
+          </li>
+
+          <li>
+            <Link href="/kontakt">Kontakt os</Link>
+          </li>
+          <li>
+            <Link href="/hjalp">Hjælp & FAQ</Link>
+          </li>
+          <li>
+            <Link href="/privatlivspolitik">Privatlivspolitik</Link>
+          </li>
+          <li>
+            <Link href="/handelsbetingelser">Handelsbetingelser</Link>
+          </li>
+        </ul>
       </nav>
     </footer>
   );

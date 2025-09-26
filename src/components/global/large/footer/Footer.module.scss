@@ -10,7 +10,38 @@
 
 .nav {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 1rem;
-  padding: 1rem;
+  padding: 3rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: -2px;
+  text-decoration: none;
+  font-family: 'Instrument Serif';
+}
+
+.list {
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: right;
+  a {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    padding: 1rem;
+    flex-direction: column;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
 }
