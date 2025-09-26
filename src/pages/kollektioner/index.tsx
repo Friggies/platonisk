@@ -16,7 +16,7 @@ export default function Kollektioner() {
           {collections.map((col) => (
             <Card
               key={col}
-              href={`/kollektioner/${encodeURIComponent(col)}`}
+              href={`/kollektioner/${encodeURIComponent(col.toLowerCase())}`}
               title={`Udforsk ${col} kollektionen`}
             />
           ))}

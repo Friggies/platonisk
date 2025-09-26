@@ -49,9 +49,7 @@ export default function Index({ products }) {
         <Column>
           <h2>Nyeste kollektioner</h2>
           <Row>
-            <Card href="/kollektioner/mmxxvi" title="MMXXVI" />
-            <Card href="/kollektioner/cracked" title="Cracked" />
-            <Card href="/kollektioner/active" title="Active" />
+            <Card href="/kollektioner/basic" title="Basic" />
           </Row>
           <Link href="/kollektioner" style={{ alignSelf: 'end' }}>
             Udforsk alle kollektioner

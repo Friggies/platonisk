@@ -18,7 +18,7 @@ export default function CollectionPage({ collection, products }) {
 
 export const getStaticPaths = async () => {
   const collections = Array.from(
-    new Set(localProducts.map((item) => item.collection))
+    new Set(localProducts.map((item) => item.collection.toLowerCase()))
   );
 
   const paths = collections.map((collection) => ({
@@ -35,7 +35,7 @@ export const getStaticProps = async ({ params }) => {
   const allProducts = await getAllProducts();
   const collection = params.collection;
   const filteredProducts = allProducts.filter(
-    (p) => p.collection === collection
+    (p) => p.collection.toLowerCase() === collection
   );
 
   return {
