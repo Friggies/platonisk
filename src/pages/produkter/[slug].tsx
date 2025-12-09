@@ -14,7 +14,6 @@ import Logorow from '../../components/global/small/logorow/Logorow';
 import Card from '../../components/global/small/card/Card';
 import Link from 'next/link';
 import ProductGrid from '../../components/product/ProductGrid';
-import { NextSeo } from 'next-seo';
 import ProductStars from '../../components/product/ProductStars';
 import ProductTags from '../../components/product/ProductTags';
 import ProductTitle from '../../components/product/ProductTitle';
@@ -88,10 +87,6 @@ export default function ProductPage({ products, product }) {
 
   return (
     <>
-      <NextSeo
-        title={`${product.name} - ${product.color.toUpperCase()}`}
-        description={product.description}
-      />
       <Section>
         <Row>
           <Column>

@@ -2,7 +2,6 @@ import useWishlistState from '../hooks/useWishlistState';
 import ProductGrid from '../components/product/ProductGrid';
 import Link from 'next/link';
 import { Heart } from 'lucide-react';
-import { NextSeo } from 'next-seo';
 import { useEffect, useState } from 'react';
 import Section from '../components/global/small/section/Section';
 
@@ -13,7 +12,6 @@ export default function WishlistPage() {
 
   return (
     <>
-      <NextSeo title="Ønskeliste" />
       <Section>
         <h1>Dine gemte produkter</h1>
         {mounted && hasItems ? (

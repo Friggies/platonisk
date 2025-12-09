@@ -1,4 +1,3 @@
-import { NextSeo } from 'next-seo';
 import ProductGrid from '../../components/product/ProductGrid';
 import Section from '../../components/global/small/section/Section';
 import { useEffect, useMemo, useState } from 'react';
@@ -155,7 +154,6 @@ function Index({ products }) {
 
   return (
     <>
-      <NextSeo title="Alle Produkter" />
       <Section>
         <h1>Alle produkter</h1>
         <SearchContainer>

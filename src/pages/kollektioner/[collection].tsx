@@ -1,4 +1,3 @@
-import { NextSeo } from 'next-seo';
 import ProductGrid from '../../components/product/ProductGrid';
 import Section from '../../components/global/small/section/Section';
 import localProducts from '../../data/products.json';
@@ -7,7 +6,6 @@ import { getAllProducts } from '../../lib/get-all-products';
 export default function CollectionPage({ collection, products }) {
   return (
     <>
-      <NextSeo title={collection} />
       <Section>
         <h1>{collection}</h1>
         <ProductGrid products={products} />

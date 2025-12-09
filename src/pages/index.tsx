@@ -1,5 +1,4 @@
 import ProductGrid from '../components/product/ProductGrid';
-import { NextSeo } from 'next-seo';
 import Hero from '../components/global/small/hero/Hero';
 import Section from '../components/global/small/section/Section';
 import Button from '../components/global/small/button/Button';
@@ -21,7 +20,6 @@ export default function Index({ products }) {
 
   return (
     <>
-      <NextSeo title="Forside" />
       <Hero>
         <h1>Få pulsen op</h1>
         <Button title="Udforsk kollektion"></Button>
